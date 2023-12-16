@@ -1,0 +1,78 @@
+.nav {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.navItems {
+  display: none;
+}
+.navItem {
+  filter: grayscale(100%);
+  opacity: 70%;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+}
+.navItem:hover {
+  opacity: 100%;
+}
+/* .navItemActive {
+    opacity: 100%;
+  } */
+
+.profile {
+  /* დროებით */
+  display: none;
+}
+.rightFloater,
+.text {
+  display: none;
+}
+
+/* Burger menu */
+.burgerMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive */
+@media screen and (min-width: 375px) {
+  /* Mobile M */
+}
+
+@media screen and (min-width: 425px) {
+  /* Mobile L */
+  .navItems {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* Tablet */
+  .nav {
+    width: 100%;
+  }
+  .profile {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+  }
+  .navItems {
+    gap: unset;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .burgerMenu {
+    display: none;
+  }
+}

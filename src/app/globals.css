@@ -40,6 +40,13 @@
   --card-border-rgb: 131, 134, 135;
 } */
 
+:root {
+  --max-width: 1128px;
+
+  /* Color */
+  --body-color: #f4f2ee;
+  --secondary-color: rgba(238, 238, 238, 255);
+}
 
 * {
   box-sizing: border-box;
