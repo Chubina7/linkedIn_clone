@@ -9,6 +9,8 @@ import Jobs from "/public/svg/jobs.svg";
 import Messaging from "/public/svg/messaging.svg";
 import Notifications from "/public/svg/notifications.svg";
 import Bullets from "/public/svg/dots.svg";
+import NavbarItem from "../navbarItem/NavbarItem";
+import Profile from "../profile/Profile";
 
 const navItems = [
   { title: "Home", src: Home, alt: "Home", id: 1 },
@@ -24,24 +26,16 @@ export default function Navbar() {
       <div className={styles.navItems}>
         {navItems.map((item) => {
           return (
-            <Image
-              className={styles.navItem}
+            <NavbarItem
               src={item.src}
               alt={item.alt}
               key={item.id}
-              // title={item.title}
+              title={item.title}
             />
           );
         })}
       </div>
-      <div className={styles.profile}>
-        <Image
-          // პროფილი (მობაილზე ბულეტ-მენიუშია / გამოჩნდეს ტაბლეტის ბრეიქფოინთზე და +)
-          src={""}
-          className={styles.navItem}
-          alt="profile"
-        />
-      </div>
+      <Profile />
       <div className={styles.burgerMenu}>
         <Image
           // ჩამოსაშლელი ბულეტ-მენიუ (გამოჩნდეს მობაილ ბრეიქფოინთზე / გაქრეს ტაბლეტზე და +)
@@ -50,7 +44,6 @@ export default function Navbar() {
           alt="bulets"
         />
       </div>
-      
     </nav>
   );
 }

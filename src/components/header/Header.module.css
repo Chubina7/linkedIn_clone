@@ -1,6 +1,8 @@
 .header {
   width: 100%;
-  position: relative;
+  position: fixed;
+  top: 0;
+  background-color: inherit;
   border-bottom: 1px solid var(--secondary-color);
 }
 .wrapper {
@@ -16,52 +18,11 @@
   align-items: center;
   padding: 0 25px;
 }
+
 .leftFloater {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-}
-
-/* Search Bar */
-.searchContainer {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.searchLogo {
-  opacity: 50%;
-  width: 25px;
-  height: 25px;
-}
-.searchLogo:hover {
-  opacity: 100%;
-  cursor: pointer;
-}
-
-.rightFloater,
-.text {
-  display: none;
-}
-
-/* Responsive */
-@media screen and (min-width: 768px) {
-  /* Tablet */
-  .rightFloater {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    border-left: 1px solid var(--secondary-color);
-    padding-left: 15px;
-  }
-  .text {
-    display: block;
-    text-align: center;
-    font-size: 12px;
-    text-wrap: nowrap;
-  }
+  gap: 15px;
 }

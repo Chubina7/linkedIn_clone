@@ -1,0 +1,38 @@
+.profile {
+  display: none;
+}
+.navItem {
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+}
+.title {
+  display: none;
+}
+
+/* Responsive */
+@media screen and (min-width: 768px) {
+  /* Tablet */
+  .profile {
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding-right: 15px;
+  }
+  .title {
+    opacity: 60%;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .text {
+    font-size: 12px;
+  }
+  .profile:hover .title {
+    opacity: 100%;
+  }
+}

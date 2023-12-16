@@ -1,0 +1,32 @@
+.wrapper {
+  opacity: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+.wrapper:hover {
+  opacity: 100%;
+}
+
+.navItem {
+  width: 25px;
+  height: 25px;
+}
+
+.title {
+  display: none;
+  user-select: none;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    display: block;
+  }
+  .wrapper {
+    justify-content: space-around;
+  }
+}
