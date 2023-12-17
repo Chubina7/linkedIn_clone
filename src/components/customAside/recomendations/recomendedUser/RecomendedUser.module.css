@@ -1,0 +1,48 @@
+/*  */
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2px;
+}
+.recomendedUserName {
+  font-size: 14px;
+  font-weight: 600;
+}
+.recomendedUserDesctription {
+  font-size: 12px;
+}
+
+/* btn */
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 12px;
+  border: 2px solid rgba(99, 96, 96, 0.8);
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.btn:hover {
+  background-color: var(--hover-bg-color);
+}
+.plusIcon {
+  height: 16px;
+  width: 16px;
+  opacity: 60%;
+}
+.btnTitle {
+  opacity: 60%;
+}

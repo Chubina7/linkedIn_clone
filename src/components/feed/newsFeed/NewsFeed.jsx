@@ -9,7 +9,6 @@ export default function NewsFeed() {
       <NewPost />
       <NewPost />
       <NewPost />
-      <NewPost />
     </section>
   );
 }

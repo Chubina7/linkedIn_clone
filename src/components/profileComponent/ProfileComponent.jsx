@@ -9,7 +9,7 @@ import UpArrow from "/public/svg/arrow-up.svg";
 
 export default function ProfileComponent() {
   return (
-    <section className={styles.wrapper}>
+    <aside className={styles.wrapper}>
       <Profile />
       <DiscoverMore />
       <div className={styles.showMoreBar}>
@@ -18,6 +18,6 @@ export default function ProfileComponent() {
           <Image src={UpArrow} alt="dropDown/dropUp" className={styles.arrow} />
         </div>
       </div>
-    </section>
+    </aside>
   );
 }

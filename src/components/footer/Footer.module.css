@@ -1,0 +1,51 @@
+.footer {
+  user-select: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wrapper {
+  width: 100%;
+  border: 2px solid var(--secondary-color);
+  border-radius: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: white;
+}
+
+.image {
+  width: 100%;
+  min-height: 300px;
+  object-fit: contain;
+}
+
+.reservation {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 80%;
+}
+
+.link {
+  font-size: 12px;
+  opacity: 60%;
+}
+.link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
