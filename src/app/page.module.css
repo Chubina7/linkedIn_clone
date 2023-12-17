@@ -1,8 +1,10 @@
 .main {
+  background-color: var(--body-color);
+  min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: 100vh;
   margin-top: 52px;
 }

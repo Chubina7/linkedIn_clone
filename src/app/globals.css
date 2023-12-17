@@ -46,6 +46,7 @@
   /* Color */
   --body-color: #f4f2ee;
   --secondary-color: rgba(238, 238, 238, 255);
+  --hover-bg-color: rgba(128, 128, 128, 0.2)
 }
 
 * {

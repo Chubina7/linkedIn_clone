@@ -1,0 +1,81 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background: white;
+  border: 2px solid var(--secondary-color);
+  border-radius: 12px;
+  padding-top: 10px;
+}
+
+/*  */
+.groupsContainer,
+.hashtagsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+}
+
+/*  */
+.eventsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+}
+
+/*  */
+.plusIconContainer {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 50px;
+  transition: 0.2s ease-in-out;
+}
+.plusIconContainer:hover {
+  cursor: pointer;
+  background: var(--hover-bg-color);
+}
+.plusIcon {
+  width: 16px;
+  height: 16px;
+}
+
+/*  */
+.text {
+  font-size: 12px;
+  color: #0075b4;
+  font-weight: 500;
+  cursor: pointer;
+}
+.text:hover {
+  text-decoration: underline;
+}
+
+/*  */
+.discoverMoreBar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid var(--secondary-color);
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.discoverMoreBar:hover {
+  background: var(--hover-bg-color);
+  cursor: pointer;
+}
+.discoverMore {
+  font-size: 14px;
+  opacity: 70%;
+}

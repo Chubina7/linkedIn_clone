@@ -1,0 +1,37 @@
+.wrapper {
+  width: 100%;
+  max-width: var(--max-width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0 25px;
+}
+/*  */
+
+.showMoreBar {
+  opacity: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+.text {
+  font-size: 14px;
+}
+.hoverContainer {
+  border-radius: 6px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+  gap: 10px;
+}
+.hoverContainer:hover {
+  cursor: pointer;
+  border-radius: 6px;
+  background-color: var(--hover-bg-color);
+}

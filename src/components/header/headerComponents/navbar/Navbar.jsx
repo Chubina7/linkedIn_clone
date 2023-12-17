@@ -10,7 +10,7 @@ import Messaging from "/public/svg/messaging.svg";
 import Notifications from "/public/svg/notifications.svg";
 import Bullets from "/public/svg/dots.svg";
 import NavbarItem from "../navbarItem/NavbarItem";
-import Profile from "../profile/Profile";
+import Profile from "../profileIcon/ProfileIcon";
 
 const navItems = [
   { title: "Home", src: Home, alt: "Home", id: 1 },
