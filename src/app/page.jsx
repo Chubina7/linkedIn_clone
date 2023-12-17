@@ -6,7 +6,8 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <ProfileComponent />
-      {/* <Feed /> */}
+      <Feed />
+      {/* <div className={styles.testDiv}></div> */}
     </main>
   );
 }

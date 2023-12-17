@@ -5,7 +5,7 @@ import NewsFeed from "./newsFeed/NewsFeed";
 
 export default function Feed() {
   return (
-    <div>
+    <div className={styles.wrapper}>
       <CreatePost />
       <NewsFeed />
     </div>

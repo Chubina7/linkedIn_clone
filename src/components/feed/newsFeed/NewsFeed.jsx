@@ -1,8 +1,15 @@
-import React from 'react'
-import styles from "./NewsFeed.module.css"
+import React from "react";
+import styles from "./NewsFeed.module.css";
+import NewPost from "./newPost/NewPost";
+// Photo source import
 
 export default function NewsFeed() {
   return (
-    <div>NewsFeed</div>
-  )
+    <section className={styles.wrapper}>
+      <NewPost />
+      <NewPost />
+      <NewPost />
+      <NewPost />
+    </section>
+  );
 }

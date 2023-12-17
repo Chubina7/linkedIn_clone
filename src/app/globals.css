@@ -44,9 +44,9 @@
   --max-width: 1128px;
 
   /* Color */
-  --body-color: #f4f2ee;
-  --secondary-color: rgba(238, 238, 238, 255);
-  --hover-bg-color: rgba(128, 128, 128, 0.2)
+  --body-color: #e6e3df;
+  --secondary-color: rgba(128, 128, 128, 0.35);
+  --hover-bg-color: rgba(128, 128, 128, 0.2);
 }
 
 * {
@@ -63,6 +63,6 @@ body {
 
 body {
   width: 100%;
-  background-color: white;
+  background-color: var(--body-color);
   min-height: 100vh;
 }

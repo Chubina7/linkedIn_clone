@@ -1,14 +1,15 @@
 .wrapper {
+  user-select: none;
   width: 100%;
+  min-width: 225px;
   max-width: var(--max-width);
+  height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   gap: 5px;
-  padding: 0 25px;
 }
-/*  */
 
 .showMoreBar {
   opacity: 70%;
@@ -34,4 +35,12 @@
   cursor: pointer;
   border-radius: 6px;
   background-color: var(--hover-bg-color);
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+  }
+  .showMoreBar {
+    display: none;
+  }
 }

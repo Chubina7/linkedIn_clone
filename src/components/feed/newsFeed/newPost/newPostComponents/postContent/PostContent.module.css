@@ -1,0 +1,6 @@
+/* Post Content */
+.postContent {
+  width: 100%;
+  min-height: 200px;
+  background-color: rgba(0, 0, 0, 0.123);
+}

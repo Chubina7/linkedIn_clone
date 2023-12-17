@@ -4,6 +4,7 @@
   top: 0;
   background-color: white;
   border-bottom: 1px solid var(--secondary-color);
+  z-index: 100;
 }
 .wrapper {
   margin: 0 auto;

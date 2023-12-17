@@ -1,0 +1,15 @@
+.wrapper {
+  width: 100%;
+  max-width: var(--max-width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    max-width: 555px;
+  }
+}

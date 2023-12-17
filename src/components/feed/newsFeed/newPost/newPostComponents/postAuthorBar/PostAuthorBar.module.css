@@ -1,0 +1,70 @@
+/* postAuthorBar */
+.postAuthorBar {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px 0 16px;
+}
+.leftContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.textContent {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 3px;
+}
+.postAuthorName {
+  font-size: 14px;
+  font-weight: bold;
+}
+.postAuthorFollowers {
+  font-size: 12px;
+  color: rgba(128, 128, 128);
+}
+.postDetailsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.postUploadDate {
+  font-size: 12px;
+  color: grey;
+}
+.postPrivacy {
+  width: 14px;
+  height: 14px;
+}
+
+.rightContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.optionsBg {
+  border-radius: 50px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.optionsBg:hover {
+  background-color: var(--secondary-color);
+}
+.threeDots,
+.x {
+  height: 24px;
+  width: 24px;
+  object-fit: cover;
+  opacity: 60%;
+  cursor: pointer;
+}
