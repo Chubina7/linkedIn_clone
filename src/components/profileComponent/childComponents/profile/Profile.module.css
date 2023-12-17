@@ -44,13 +44,6 @@
 .identifier:hover .userName {
   text-decoration: underline;
 }
-.profilePic {
-  width: 72px;
-  height: 72px;
-  object-fit: cover;
-  border-radius: 50px;
-  border: 2px solid var(--secondary-color);
-}
 .userName {
   font-weight: 500;
 }

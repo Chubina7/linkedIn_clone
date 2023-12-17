@@ -5,6 +5,7 @@ import Image from "next/image";
 import ProfilePic from "/public/jpg/profile.jpg";
 import AddFriendIcon from "/public/svg/addFriend.svg";
 import BookmarkIcon from "/public/svg/bookmark.svg";
+import UserPic from "@/components/user/userPic/UserPic";
 
 export default function Profile() {
   return (
@@ -12,11 +13,7 @@ export default function Profile() {
       <div className={styles.backgroundImg}></div>
       <div className={styles.identifierContainer}>
         <div className={styles.identifier}>
-          <Image
-            src={ProfilePic}
-            alt="profile pic"
-            className={styles.profilePic}
-          />
+          <UserPic height={72} width={72} />
           <p className={styles.userName}>Name Surename </p>
         </div>
         <p className={styles.userDescription}>- -</p>
