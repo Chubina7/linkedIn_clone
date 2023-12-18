@@ -6,10 +6,11 @@ import ProfilePic from "/public/jpg/profile.jpg";
 import AddFriendIcon from "/public/svg/addFriend.svg";
 import BookmarkIcon from "/public/svg/bookmark.svg";
 import UserPic from "@/components/user/userPic/UserPic";
+import ComponentBg from "@/components/componentBg/componentBg";
 
 export default function Profile() {
   return (
-    <div className={styles.wrapper}>
+    <ComponentBg>
       <div className={styles.backgroundImg}></div>
       <div className={styles.identifierContainer}>
         <div className={styles.identifier}>
@@ -43,6 +44,6 @@ export default function Profile() {
         />
         <p className={styles.boldText}>My items</p>
       </div>
-    </div>
+    </ComponentBg>
   );
 }

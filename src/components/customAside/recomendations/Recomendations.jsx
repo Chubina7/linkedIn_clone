@@ -5,10 +5,11 @@ import RecomendedUser from "./recomendedUser/RecomendedUser";
 // Photo source import
 import MoreInfoIcon from "/public/svg/info.svg";
 import RightPointedArrow from "/public/svg/arrowToRight.svg";
+import ComponentBg from "@/components/componentBg/componentBg";
 
 export default function Recomendations() {
   return (
-    <section className={styles.wrapper}>
+    <ComponentBg>
       <div className={styles.upperContainer}>
         <p className={styles.heading}>Add to your feed</p>
         <Image
@@ -28,6 +29,6 @@ export default function Recomendations() {
           className={styles.arrow}
         />
       </div>
-    </section>
+    </ComponentBg>
   );
 }

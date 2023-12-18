@@ -5,15 +5,16 @@ import PostDescription from "./newPostComponents/postDescription/PostDescription
 import PostContent from "./newPostComponents/postContent/PostContent";
 import PostEngagement from "./newPostComponents/postEngagement/PostEngagement";
 import PostInteraction from "./newPostComponents/postInteraction/postInteraction";
+import ComponentBg from "@/components/componentBg/componentBg";
 
 export default function NewPost() {
   return (
-    <div className={styles.wrapper}>
+    <ComponentBg>
       <PostAuthorBar />
       <PostDescription />
       <PostContent />
       <PostEngagement />
       <PostInteraction />
-    </div>
+    </ComponentBg>
   );
 }

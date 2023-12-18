@@ -1,0 +1,102 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 8px 16px;
+}
+.border {
+  width: 100%;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.bg {
+  position: relative;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.533);
+  width: 100%;
+  height: 55px;
+  margin-bottom: 35px;
+}
+
+/*  */
+.floatContainer {
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 8px;
+}
+
+.xBg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background-color: grey;
+  border-radius: 50px;
+  opacity: 50%;
+  cursor: pointer;
+}
+.removeBtn {
+  width: 60%;
+  height: 60%;
+  object-fit: cover;
+}
+
+/*  */
+.textContent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0 8px;
+}
+.userName,
+.userWorkTitle,
+.userFollowersNum {
+  font-size: 14px;
+  opacity: 60%;
+}
+
+.userName {
+  opacity: 100%;
+  font-weight: bold;
+}
+
+/* followButton */
+.btnContainer {
+  width: 100%;
+  padding: 8px;
+}
+.followButton {
+  width: 100%;
+  background-color: transparent;
+  color: var(--linkdin-blue);
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid var(--linkdin-blue);
+  border-radius: 50px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.followButton:hover {
+  background-color: var(--linkdin-blue);
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    padding: 2px 6px;
+  }
+}

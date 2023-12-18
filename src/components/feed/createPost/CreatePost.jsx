@@ -3,14 +3,15 @@ import styles from "./CreatePost.module.css";
 import Image from "next/image";
 import UserPic from "@/components/user/userPic/UserPic";
 // Photo source import
-import MediaIcon from "/public/svg/notes.svg";
+import MediaIcon from "/public/svg/imageIcon.svg";
 import EventIcon from "/public/svg/calendar.svg";
-import WriteArticleIcon from "/public/svg/write.svg";
+import WriteArticleIcon from "/public/svg/notes.svg";
 import Button from "@/components/button/Button";
+import ComponentBg from "@/components/componentBg/componentBg";
 
 export default function CreatePost() {
   return (
-    <section className={styles.wrapper}>
+    <ComponentBg>
       <div className={styles.top}>
         <UserPic width={48} height={48} />
         <button className={styles.postInput}>Start a post</button>
@@ -24,6 +25,6 @@ export default function CreatePost() {
           alt={"event icon"}
         />
       </div>
-    </section>
+    </ComponentBg>
   );
 }

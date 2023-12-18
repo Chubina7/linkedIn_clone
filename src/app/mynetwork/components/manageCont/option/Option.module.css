@@ -1,0 +1,32 @@
+.option {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 26px;
+  user-select: none;
+}
+.option:hover {
+  background-color: var(--hover-bg-color);
+  cursor: pointer;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  opacity: 60%;
+}
+
+.right,
+.leftText {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8);
+  text-wrap: nowrap;
+}
