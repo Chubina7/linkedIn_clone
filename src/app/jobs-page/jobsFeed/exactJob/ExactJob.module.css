@@ -1,0 +1,70 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8px 0;
+}
+.job {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/*  */
+.textContent {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 3px;
+}
+.jobTitle {
+  color: var(--linkdin-blue);
+  font-weight: bold;
+}
+.jobTitle:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.jobRecruiter {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.jobRecruiterStatus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.dartsIcon {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+}
+.statusTitle {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/*  */
+.removeBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.removeBtn:hover {
+  cursor: pointer;
+  background-color: var(--secondary-color);
+}
+.xIcon {
+  width: 16px;
+  height: 16px;
+  opacity: 80%;
+}

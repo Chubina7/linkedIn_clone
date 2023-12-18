@@ -1,0 +1,26 @@
+.wrapper {
+  width: 100%;
+  min-width: 470px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0 16px;
+}
+.titleContainer {
+  padding: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.title {
+  font-size: 20px;
+}
+.description {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+}

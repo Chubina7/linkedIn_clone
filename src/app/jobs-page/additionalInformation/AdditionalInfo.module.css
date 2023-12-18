@@ -1,0 +1,57 @@
+/*  */
+.headingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5px;
+  padding: 16px;
+}
+.heading {
+  font-weight: bold;
+  font-size: 18px;
+}
+.headingDesc {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+}
+/*  */
+.pannel {
+  padding: 4px 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pannel:hover {
+  background-color: #0075b420;
+  cursor: pointer;
+}
+.pannelText {
+  font-size: 14px;
+  font-weight: 500;
+}
+/*  */
+.bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px 16px 16px 16px;
+}
+.bottomText {
+  font-size: 14px;
+}
+.bottomBtn {
+  width: 100%;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  font-weight: bold;
+}
+.bottomBtn:hover {
+  color: var(--linkdin-blue);
+  text-decoration: underline;
+  cursor: pointer;
+}
