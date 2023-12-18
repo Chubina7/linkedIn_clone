@@ -44,6 +44,23 @@
   cursor: pointer;
 }
 
+.suggestionWrapper {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+}
+.inputContainer {
+  position: relative;
+}
+.backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 50%;
+}
+
 @media screen and (min-width: 768px) {
   .title {
     display: block;

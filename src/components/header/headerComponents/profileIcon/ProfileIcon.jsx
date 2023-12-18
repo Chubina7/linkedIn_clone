@@ -4,6 +4,7 @@ import Image from "next/image";
 // Photo source import
 import ArrowDown from "/public/svg/arrow-down.svg";
 import UserPic from "@/components/user/userPic/UserPic";
+import Modal from "./modal/Modal";
 
 export default function Profile() {
   return (
@@ -12,6 +13,10 @@ export default function Profile() {
       <div className={styles.title}>
         <p className={styles.text}>Me</p>
         <Image src={ArrowDown} alt="arrow down" />
+      </div>
+      {/* Modal */}
+      <div className={styles.modalWrapper}>
+        <Modal />
       </div>
     </div>
   );

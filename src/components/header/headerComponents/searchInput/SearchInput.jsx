@@ -3,6 +3,7 @@ import styles from "./SearchInput.module.css";
 import Image from "next/image";
 // Photo source import
 import SearchLogo from "/public/svg/search.svg";
+import Suggestions from "./suggestions/Suggestions";
 
 export default function SearchInput() {
   return (
@@ -13,7 +14,14 @@ export default function SearchInput() {
           className={styles.searchLogo}
           alt="search button"
         />
-        <input type="text" className={styles.input} placeholder="Search" />
+
+        <div className={styles.inputContainer}>
+          <input type="text" className={styles.input} placeholder="Search" />
+          <div className={styles.suggestionWrapper}>
+            <Suggestions />
+          </div>
+          {/* <div className={styles.backdrop}></div> */}
+        </div>
       </div>
       <p className={styles.title}>Search</p>
     </div>

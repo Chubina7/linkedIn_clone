@@ -30,4 +30,11 @@
   .profile:hover .title {
     opacity: 100%;
   }
+  .modalWrapper {
+    width: 270px;
+    position: absolute;
+    top: 55px;
+    right: 220px;
+    z-index: 100;
+  }
 }

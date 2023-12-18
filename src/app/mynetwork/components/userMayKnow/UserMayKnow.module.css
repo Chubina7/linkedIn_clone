@@ -72,31 +72,3 @@
   opacity: 100%;
   font-weight: bold;
 }
-
-/* followButton */
-.btnContainer {
-  width: 100%;
-  padding: 8px;
-}
-.followButton {
-  width: 100%;
-  background-color: transparent;
-  color: var(--linkdin-blue);
-  font-size: 16px;
-  font-weight: 600;
-  border: 2px solid var(--linkdin-blue);
-  border-radius: 50px;
-  padding: 8px 16px;
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
-}
-.followButton:hover {
-  background-color: var(--linkdin-blue);
-  color: white;
-}
-
-@media screen and (min-width: 768px) {
-  .wrapper {
-    padding: 2px 6px;
-  }
-}

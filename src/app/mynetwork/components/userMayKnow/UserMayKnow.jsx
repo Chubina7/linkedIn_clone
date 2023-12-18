@@ -3,7 +3,8 @@ import styles from "./UserMayKnow.module.css";
 import UserPic from "@/components/user/userPic/UserPic";
 import Image from "next/image";
 // Photo source import
-import Xx from "/public/svg/xx.svg"
+import Xx from "/public/svg/xx.svg";
+import FollowBtn from "@/components/followBtn/FollowBtn";
 
 export default function UserMayKnow() {
   return (
@@ -22,9 +23,7 @@ export default function UserMayKnow() {
           <p className={styles.userWorkTitle}>HR at x company</p>
           <p className={styles.userFollowersNum}>9,999 followers</p>
         </div>
-        <div className={styles.btnContainer}>
-          <button className={styles.followButton}>Follow</button>
-        </div>
+        <FollowBtn title="Follow" />
       </div>
     </div>
   );
