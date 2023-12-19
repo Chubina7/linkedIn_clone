@@ -5,21 +5,21 @@ import styles from "./SearchInput.module.css";
 import Image from "next/image";
 // Photo source import
 import SearchLogo from "/public/svg/search.svg";
+import Backdrop from "@/components/backdrop/Backdrop";
+import Logo from "/public/svg/logo.svg";
 
 export default function SearchInput() {
   const [isFocused, setIsFocused] = useState(false);
-  const inputRef = useRef(null);
+  const inputActivationHandler = () => {
+    setIsFocused(!isFocused);
+  };
 
+  const inputRef = useRef(null);
   useEffect(() => {
     if (isFocused && inputRef.current) {
       inputRef.current.focus();
     }
   }, [isFocused]);
-
-  const inputActivationHandler = () => {
-    setIsFocused(!isFocused);
-  };
-
   const inputUnmountHandler = () => {
     setIsFocused(false);
   };
@@ -44,6 +44,7 @@ export default function SearchInput() {
       </div>
       {isFocused && (
         <div className={styles.floatingInput}>
+          <Image src={Logo} width={35} height={35} alt="home logo" />
           <input
             type="text"
             className={styles.input}
@@ -53,6 +54,7 @@ export default function SearchInput() {
           />
         </div>
       )}
+      {isFocused && <Backdrop show={true} />}
     </>
   );
 }
