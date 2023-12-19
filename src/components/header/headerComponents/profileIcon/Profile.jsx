@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./ProfileIcon.module.css";
+import styles from "./Profile.module.css";
 import Image from "next/image";
 // Photo source import
 import ArrowDown from "/public/svg/arrow-down.svg";
@@ -14,10 +14,9 @@ export default function Profile() {
         <p className={styles.text}>Me</p>
         <Image src={ArrowDown} alt="arrow down" />
       </div>
-      {/* Modal */}
-      <div className={styles.modalWrapper}>
+      {/* <div className={styles.modalWrapper}>
         <Modal />
-      </div>
+      </div> */}
     </div>
   );
 }

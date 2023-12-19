@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Modal.module.css";
 import ComponentBg from "@/components/componentBg/ComponentBg";
 import UserPic from "@/components/user/userPic/UserPic";
-import FollowBtn from "@/components/followBtn/FollowBtn";
+import FollowBtn from "@/components/buttons/followBtn/FollowBtn";
 
 export default function Modal() {
   return (

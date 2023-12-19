@@ -14,18 +14,7 @@
   display: none;
 }
 
-/* Burger menu */
-.burgerMenu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /* Responsive */
-@media screen and (min-width: 375px) {
-  /* Mobile M */
-}
-
 @media screen and (min-width: 425px) {
   /* Mobile L */
   .navItems {
@@ -61,6 +50,9 @@
   }
 }
 @media screen and (min-width: 1024px) {
+  .nav {
+    width: fit-content;
+  }
   .navItems {
     gap: 20px;
     justify-content: flex-end;

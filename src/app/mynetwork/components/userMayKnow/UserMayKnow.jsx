@@ -4,7 +4,7 @@ import UserPic from "@/components/user/userPic/UserPic";
 import Image from "next/image";
 // Photo source import
 import Xx from "/public/svg/xx.svg";
-import FollowBtn from "@/components/followBtn/FollowBtn";
+import FollowBtn from "@/components/buttons/followBtn/FollowBtn";
 
 export default function UserMayKnow() {
   return (

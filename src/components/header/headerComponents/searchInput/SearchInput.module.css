@@ -1,64 +1,73 @@
-.input:focus {
-  outline: none;
-}
 .searchContainer {
-  opacity: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.searchContainer:hover .searchLogo {
+  opacity: 100%;
+}
+.searchContainer:hover .title {
+  opacity: 100%;
+}
+
+.searchLogoContainer {
+  cursor: pointer;
   height: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  cursor: pointer;
 }
-.searchContainer:hover {
-  opacity: 100%;
-}
-
 .title {
+  opacity: 60%;
   display: none;
   user-select: none;
   font-size: 12px;
 }
-.input {
-  height: 100%;
-  visibility: hidden;
-}
-.inputCont {
-  width: 50px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
 .searchLogo {
-  position: absolute;
+  opacity: 60%;
   width: 25px;
   height: 25px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.searchLogo:hover {
-  opacity: 100%;
-  cursor: pointer;
 }
 
-.suggestionWrapper {
+.floatingInput {
   position: absolute;
-  top: 110%;
-  left: 0;
-  width: 100%;
-}
-.inputContainer {
-  position: relative;
-}
-.backdrop {
-  position: absolute;
-  width: 100%;
+  top: 0;
+  left: 65px;
   height: 100%;
-  background-color: black;
-  opacity: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  padding-right: 90px;
+  z-index: 101;
+}
+.input {
+  opacity: 60%;
+  display: block;
+  height: 100%;
+  font-size: 14px;
+  height: 35px;
+  padding: 2px 18px 2px 50px;
+  background-color: #e2e9ef;
+  border: none;
+  border-radius: 6px;
+  background-image: url("../../../../../public/svg/search.svg");
+  background-repeat: no-repeat;
+  background-position: 20px;
+  background-size: 18px;
+  transition: width 0.3s ease;
+  width: 200px;
+}
+.input:focus {
+  opacity: 100%;
+  width: 100%;
+}
+
+.staticInput {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -67,31 +76,19 @@
   }
 }
 @media screen and (min-width: 1024px) {
+  .searchLogoContainer {
+    display: none;
+  }
   .searchContainer {
-    opacity: 100%;
+    justify-content: flex-start;
+    width: 100%;
+    padding-right: 15px;
   }
-  .inputCont {
-    width: unset;
-    height: 100%;
+  .staticInput {
+    display: flex;
+    width: 100%;
   }
-  .input {
-    visibility: visible;
-    font-size: 14px;
-    height: 35px;
-    padding: 2px 2px 2px 55px;
-    background-color: #e2e9ef;
-    border: none;
-    border-radius: 6px;
-  }
-  .searchLogo {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
-  }
-  .title {
+  .floatingInput {
     display: none;
   }
 }

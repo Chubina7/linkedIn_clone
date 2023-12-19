@@ -1,15 +1,13 @@
 import React from "react";
 import styles from "./Navbar.module.css";
-import Image from "next/image";
 import NavbarItem from "./navbarItem/NavbarItem";
-import Profile from "../profileIcon/ProfileIcon";
-
+import Profile from "../profileIcon/Profile";
 // Photo source import
 import Home from "/public/svg/home.svg";
 import MyNetwork from "/public/svg/network.svg";
 import Jobs from "/public/svg/jobs.svg";
 import Notifications from "/public/svg/notifications.svg";
-import Bullets from "/public/svg/dots.svg";
+import BulletMenu from "./bulletMenu/BulletMenu";
 
 const navItems = [
   { title: "Home", src: Home, alt: "Home", id: 1 },
@@ -34,14 +32,7 @@ export default function Navbar() {
         })}
       </div>
       <Profile />
-      <div className={styles.burgerMenu}>
-        <Image
-          // ჩამოსაშლელი ბულეტ-მენიუ (გამოჩნდეს მობაილ ბრეიქფოინთზე / გაქრეს ტაბლეტზე და +)
-          src={Bullets}
-          className={styles.navItem}
-          alt="bulets"
-        />
-      </div>
+      <BulletMenu />
     </nav>
   );
 }

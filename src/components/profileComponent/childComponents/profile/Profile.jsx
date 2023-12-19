@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./Profile.module.css";
 import Image from "next/image";
 // Photo source import
-import ProfilePic from "/public/jpg/profile.jpg";
 import AddFriendIcon from "/public/svg/addFriend.svg";
 import BookmarkIcon from "/public/svg/bookmark.svg";
 import UserPic from "@/components/user/userPic/UserPic";

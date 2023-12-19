@@ -6,7 +6,7 @@ import UserPic from "@/components/user/userPic/UserPic";
 import MediaIcon from "/public/svg/imageIcon.svg";
 import EventIcon from "/public/svg/calendar.svg";
 import WriteArticleIcon from "/public/svg/notes.svg";
-import Button from "@/components/button/Button";
+import Button from "@/components/buttons/button/Button";
 import ComponentBg from "@/components/componentBg/componentBg";
 
 export default function CreatePost() {

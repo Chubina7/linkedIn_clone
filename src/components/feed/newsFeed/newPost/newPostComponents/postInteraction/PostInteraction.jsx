@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./PostInteraction.module.css";
-import Button from "@/components/button/Button";
+import Button from "@/components/buttons/button/Button";
 // Photo source import
 import LikeIcon from "/public/svg/like.svg";
 import CommentIcon from "/public/svg/comment.svg";
