@@ -5,6 +5,6 @@ export default function Backdrop({ show, onClick }) {
   if (!show) return null;
   return <div
     className={styles.overlay}
-    // onClick={""}
+    onClick={onClick}
     ></div>;
 }
