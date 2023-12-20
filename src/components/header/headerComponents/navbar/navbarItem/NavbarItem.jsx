@@ -7,7 +7,6 @@ import Link from "next/link";
 
 export default function NavbarItem({ className, src, alt, key, title, href }) {
   const pathName = usePathname();
-  console.log(pathName);
   return (
     <Link href={href}>
       <div

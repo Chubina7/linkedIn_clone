@@ -7,7 +7,7 @@ import ProfilePic from "/public/jpg/profile.jpg";
 export default function UserPic(props) {
   return (
     <Image
-      src={ProfilePic}
+      src={props.src}
       alt="profile pic"
       width={props.width}
       height={props.height}

@@ -7,10 +7,15 @@ import PostEngagement from "./newPostComponents/postEngagement/PostEngagement";
 import PostInteraction from "./newPostComponents/postInteraction/postInteraction";
 import ComponentBg from "@/components/componentBg/componentBg";
 
-export default function NewPost() {
+export default function NewPost({ userFirstName, userLastName, userEmail, userImg }) {
   return (
     <ComponentBg>
-      <PostAuthorBar />
+      <PostAuthorBar
+        userFirstName={userFirstName}
+        userLastName={userLastName}
+        userEmail={userEmail}
+        userImg={userImg}
+      />
       <PostDescription />
       <PostContent />
       <PostEngagement />

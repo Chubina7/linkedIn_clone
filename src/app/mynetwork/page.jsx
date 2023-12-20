@@ -4,6 +4,12 @@ import ComponentBg from "@/components/componentBg/componentBg";
 import UsersFetching from "./components/usersFetching/UsersFetching";
 import ManageCont from "./components/manageCont/ManageCont";
 
+
+export const metadata = {
+  title: "My Network",
+  description: "Cloned by Luka Chubinidze",
+};
+
 export default function page() {
   return (
     <main className={styles.main}>

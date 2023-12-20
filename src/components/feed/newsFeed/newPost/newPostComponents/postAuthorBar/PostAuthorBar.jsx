@@ -7,14 +7,16 @@ import PublicIcon from "/public/svg/public.svg";
 import ThreeDots from "/public/svg/dots.svg";
 import Xx from "/public/svg/xx.svg";
 
-export default function PostAuthorBar() {
+export default function PostAuthorBar({ userFirstName, userLastName, userEmail, userImg }) {
   return (
     <div className={styles.postAuthorBar}>
       <div className={styles.leftContainer}>
-        <UserPic width={48} height={48} />
+        <UserPic width={48} height={48} src={userImg} />
         <div className={styles.textContent}>
-          <p className={styles.postAuthorName}>Name Name</p>
-          <p className={styles.postAuthorFollowers}>9999 followers</p>
+          <p className={styles.postAuthorName}>
+            {userFirstName} {userLastName}
+          </p>
+          <p className={styles.postAuthorFollowers}>{userEmail}</p>
           <div className={styles.postDetailsContainer}>
             <p className={styles.postUploadDate}>1w</p>
             <Image
