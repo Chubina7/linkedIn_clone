@@ -24,7 +24,7 @@ const navItems = [
     title: "Notifications",
     src: Notifications,
     alt: "Notifications",
-    href: "/",
+    href: "/notifications",
     id: 5,
   },
 ];
@@ -35,14 +35,13 @@ export default function Navbar() {
       <div className={styles.navItems}>
         {navItems.map((item) => {
           return (
-            <Link href={item.href}>
-              <NavbarItem
-                src={item.src}
-                alt={item.alt}
-                key={item.id}
-                title={item.title}
-              />
-            </Link>
+            <NavbarItem
+              src={item.src}
+              alt={item.alt}
+              key={item.id}
+              title={item.title}
+              href={item.href}
+            />
           );
         })}
       </div>
