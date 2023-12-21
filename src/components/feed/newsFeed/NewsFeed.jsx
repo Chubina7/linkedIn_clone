@@ -2,19 +2,19 @@ import React from "react";
 import styles from "./NewsFeed.module.css";
 import NewPost from "./newPost/NewPost";
 
-// SSR fetch
-const getUsersData = async () => {
-  const res = await fetch("https://dummyjson.com/users/5/posts");
-  const result = await res.json();
-  if (!res.ok) {
-    console.log("error");
+
+const getData = async () => {
+  const response = await fetch("https://dummyjson.com/users/5/posts");
+  const result = await response.json();
+  if (!response.ok) {
+    throw new Error("Error occuired");
   }
-  return result.posts;
+  return result;
 };
 
 export default async function NewsFeed() {
-  const usersData = await getUsersData();
-  console.log(usersData);
+  const data = await getData();
+
   return (
     <section className={styles.wrapper}>
       {/* {usersData.map((item) => {

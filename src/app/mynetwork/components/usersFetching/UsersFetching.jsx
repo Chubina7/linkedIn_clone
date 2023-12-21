@@ -18,7 +18,6 @@ const getData = async () => {
 
 export default async function UsersFetching() {
   const users = await getData();
-
   return (
     <div className={styles.mainWrapper}>
       <ComponentBg>

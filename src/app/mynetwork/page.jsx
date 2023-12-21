@@ -1,9 +1,7 @@
 import React from "react";
 import styles from "./page.module.css";
-import ComponentBg from "@/components/componentBg/componentBg";
 import UsersFetching from "./components/usersFetching/UsersFetching";
 import ManageCont from "./components/manageCont/ManageCont";
-
 
 export const metadata = {
   title: "My Network",
