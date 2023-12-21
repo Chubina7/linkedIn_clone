@@ -8,7 +8,6 @@ import MyNetwork from "/public/svg/network.svg";
 import Jobs from "/public/svg/jobs.svg";
 import Notifications from "/public/svg/notifications.svg";
 import BulletMenu from "./bulletMenu/BulletMenu";
-import Link from "next/link";
 
 const navItems = [
   { title: "Home", src: Home, alt: "Home", href: "/", id: 1 },

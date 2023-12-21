@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Profile.module.css";
 import Image from "next/image";
 // Photo source import
-import ArrowDown from "/public/svg/arrow-down.svg";
+import ArrowDown from "/public/svg/downArrow.svg";
 import UserPic from "@/components/user/userPic/UserPic";
 import Modal from "./modal/Modal";
 

@@ -21,6 +21,7 @@
 }
 .text {
   font-size: 14px;
+  font-weight: 500;
 }
 .hoverContainer {
   border-radius: 6px;
@@ -38,8 +39,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .wrapper {
-  }
   .showMoreBar {
     display: none;
   }

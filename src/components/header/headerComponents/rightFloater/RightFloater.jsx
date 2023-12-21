@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./RightFloater.module.css";
 import Image from "next/image";
 // Photo source import
-import ArrowDown from "/public/svg/arrow-down.svg";
+import ArrowDown from "/public/svg/DownArrow.svg"
 import More from "/public/svg/notes.svg";
 
 export default function RightFloater() {
