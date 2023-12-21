@@ -6,8 +6,24 @@ import RecomendedUser from "./recomendedUser/RecomendedUser";
 import MoreInfoIcon from "/public/svg/info.svg";
 import RightPointedArrow from "/public/svg/arrowToRight.svg";
 import ComponentBg from "@/components/componentBg/componentBg";
+import Link from "next/link";
 
-export default function Recomendations() {
+const randomId = Math.floor(Math.random() * (75 - 15 + 1)) + 15;
+
+const getData = async () => {
+  const response = await fetch(
+    `https://dummyjson.com/users?limit=3&skip=${randomId}&select=firstName,lastName,image,company`
+  );
+  const result = await response.json();
+
+  return result.users;
+};
+
+export default async function Recomendations() {
+  const data = await getData();
+
+  // console.log(data);
+
   return (
     <ComponentBg>
       <div className={styles.upperContainer}>
@@ -18,16 +34,28 @@ export default function Recomendations() {
           className={styles.moreInfoIcon}
         />
       </div>
-      <RecomendedUser />
-      <RecomendedUser />
-      <RecomendedUser />
+      {data.map((item) => {
+        return (
+          <RecomendedUser
+            userId={item.id}
+            userImage={item.image}
+            userName={item.firstName}
+            userSureName={item.lastName}
+            workTitle={item.company.title}
+          />
+        );
+      })}
       <div className={styles.bottomContainer}>
-        <p className={styles.bottomText}>View all recomendations</p>
-        <Image
-          src={RightPointedArrow}
-          alt="arrow to right"
-          className={styles.arrow}
-        />
+        <Link href={"/mynetwork"}>
+          <div className={styles.bottomTextWrapper}>
+            <p className={styles.bottomText}>View all recomendations</p>
+            <Image
+              src={RightPointedArrow}
+              alt="arrow to right"
+              className={styles.arrow}
+            />
+          </div>
+        </Link>
       </div>
     </ComponentBg>
   );

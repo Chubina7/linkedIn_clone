@@ -16,18 +16,23 @@
 
 /*  */
 .bottomContainer {
+  padding: 0 16px 16px 16px;
+}
+.bottomTextWrapper {
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
-  padding: 0 16px 16px 16px;
   opacity: 80%;
-  cursor: pointer;
 }
 .bottomText {
   font-size: 14px;
+  opacity: 60%;
   font-weight: 500;
+}
+.bottomTextWrapper:hover {
+  opacity: 100%;
 }
 .arrow {
   width: 13px;

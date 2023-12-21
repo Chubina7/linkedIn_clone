@@ -6,7 +6,6 @@
   align-items: flex-start;
   gap: 10px;
   padding: 8px 16px;
-  cursor: pointer;
 }
 .text {
   display: flex;

@@ -20,14 +20,14 @@ export default function UserMayKnow({
     <div className={styles.wrapper}>
       <div className={styles.border}>
         <div className={styles.bg}>
-          <Link href={`/mynetwork/${userId}`}>
+          <Link href={`/${userId}`}>
             <div className={styles.floatContainer}>
               <UserPic width={72} height={72} src={userImage} />
             </div>
           </Link>
         </div>
         <div className={styles.textContent}>
-          <Link href={`/mynetwork/${userId}`}>
+          <Link href={`/${userId}`}>
             <p className={styles.userName}>
               {userName} {userLastName}
             </p>
