@@ -12,13 +12,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 16px 0 16px;
+  padding: 16px 16px 0 16px;
 }
 /*  */
 
 .wrapper {
   width: 100%;
-  padding: 8px 16px;
+  padding: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -57,7 +57,8 @@
   }
   .fetchedDataWrapper {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-columns: repeat(1fr, 33.33333333333333px);
   }
 }
 

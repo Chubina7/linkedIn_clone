@@ -6,12 +6,20 @@ import ProfilePic from "/public/jpg/profile.jpg";
 
 export default function UserPic(props) {
   return (
-    <Image
-      src={props.src}
-      alt="profile pic"
-      width={props.width}
-      height={props.height}
-      className={styles.profilePic}
-    />
+    <div
+      style={{
+        backgroundColor: "white",
+        borderRadius: "50px",
+        textAlign: "center",
+      }}
+    >
+      <Image
+        src={props.src}
+        alt="profile pic"
+        width={props.width}
+        height={props.height}
+        className={styles.profilePic}
+      />
+    </div>
   );
 }

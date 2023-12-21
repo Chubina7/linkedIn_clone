@@ -1,27 +1,43 @@
 import React from "react";
 import styles from "./UserMayKnow.module.css";
 import UserPic from "@/components/user/userPic/UserPic";
-import Image from "next/image";
+import Link from "next/link";
 // Photo source import
-import Xx from "/public/svg/xx.svg";
 import FollowBtn from "@/components/buttons/followBtn/FollowBtn";
 
-export default function UserMayKnow() {
+export default function UserMayKnow({
+  userId,
+  userName,
+  userLastName,
+  userEmail,
+  userImage,
+  userUsername,
+  userWorkPlaceName,
+  userWorkPlaceDepartment,
+  userWorkPlaceTitle,
+}) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.border}>
         <div className={styles.bg}>
-          <div className={styles.floatContainer}>
-            <UserPic width={72} height={72} />
-            <div className={styles.xBg}>
-              <Image src={Xx} alt="x" className={styles.removeBtn} />
+          <Link href={`/mynetwork/${userId}`}>
+            <div className={styles.floatContainer}>
+              <UserPic width={72} height={72} src={userImage} />
             </div>
-          </div>
+          </Link>
         </div>
         <div className={styles.textContent}>
-          <p className={styles.userName}>Test Testadze</p>
-          <p className={styles.userWorkTitle}>HR at x company</p>
-          <p className={styles.userFollowersNum}>9,999 followers</p>
+          <Link href={`/mynetwork/${userId}`}>
+            <p className={styles.userName}>
+              {userName} {userLastName}
+            </p>
+          </Link>
+          <p className={styles.userWorkTitle}>
+            {userWorkPlaceTitle} at "{userWorkPlaceName}"
+          </p>
+          <Link href="https://mail.google.com/" target={"_blank"}>
+            <p className={styles.userContact}>{userEmail}</p>
+          </Link>
         </div>
         <FollowBtn title="Follow" />
       </div>

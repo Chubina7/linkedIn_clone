@@ -7,7 +7,13 @@ import PostEngagement from "./newPostComponents/postEngagement/PostEngagement";
 import PostInteraction from "./newPostComponents/postInteraction/postInteraction";
 import ComponentBg from "@/components/componentBg/componentBg";
 
-export default function NewPost({ userFirstName, userLastName, userEmail, userImg }) {
+export default function NewPost({
+  userFirstName,
+  userLastName,
+  userEmail,
+  userImg,
+  postContent
+}) {
   return (
     <ComponentBg>
       <PostAuthorBar
@@ -17,7 +23,7 @@ export default function NewPost({ userFirstName, userLastName, userEmail, userIm
         userImg={userImg}
       />
       <PostDescription />
-      <PostContent />
+      <PostContent postContent={postContent} />
       <PostEngagement />
       <PostInteraction />
     </ComponentBg>
