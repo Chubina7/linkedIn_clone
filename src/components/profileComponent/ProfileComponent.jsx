@@ -25,7 +25,6 @@ export default function ProfileComponent() {
       window.removeEventListener("resize", () => {
         setWindowWidth(window.innerWidth);
       });
-      console.log(windowWidth);
     };
   }, []);
 

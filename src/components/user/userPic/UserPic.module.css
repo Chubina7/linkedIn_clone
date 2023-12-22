@@ -1,5 +1,5 @@
 .profilePic {
   object-fit: cover;
-  border-radius: 50px;
+  border-radius: 100%;
   border: 2px solid var(--secondary-color);
 }

@@ -9,8 +9,9 @@ export default function UserPic(props) {
     <div
       style={{
         backgroundColor: "white",
-        borderRadius: "50px",
-        textAlign: "center",
+        borderRadius: "100%",
+        display: "flex"
+        
       }}
     >
       <Image
