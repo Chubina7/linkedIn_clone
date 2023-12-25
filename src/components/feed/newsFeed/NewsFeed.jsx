@@ -13,21 +13,24 @@ const getData = async () => {
 
 export default async function NewsFeed() {
   const data = await getData();
-  console.log(data);
   return (
     <section className={styles.wrapper}>
-      {/* {usersData.map((item) => {
+      {data.map((item) => {
         return (
           <NewPost
-            userFirstName={item.firstName}
-            userLastName={item.lastName}
-            userEmail={item.email}
-            userImg={item.image}
-            postContent={item.image}
+            authorName={item.authorName}
+            authorSurename={item.authorSurename}
+            authorWorkPlace={item.authorWorkPlace}
+            authorWorkTitle={item.authorWorkTitle}
+            authorProfileImage={item.authorProfileImage}
+            postUploadDate={item.postUploadDate}
+            postDescription={item.postDescription}
+            postContent={item.postContent}
+            postLikes={item.postLikes}
+            postComments={item.postComments}
           />
         );
-      })} */}
-      <NewPost />
+      })}
     </section>
   );
 }

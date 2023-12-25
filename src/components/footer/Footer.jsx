@@ -3,13 +3,15 @@ import styles from "./Footer.module.css";
 import Image from "next/image";
 import ComponentBg from "../componentBg/componentBg";
 import Link from "next/link";
+// Photo source import
+import FooterImg from "/public/jpg/footerImg.jpg"
 
 export default function Footer({ children }) {
   return (
     <footer className={styles.footer}>
       <ComponentBg>
         {children}
-        <Image src={""} alt="ad photo" className={styles.image} />
+        <Image src={FooterImg} alt="ad photo" className={styles.image} />
       </ComponentBg>
       <div className={styles.reservation}>
         <Link

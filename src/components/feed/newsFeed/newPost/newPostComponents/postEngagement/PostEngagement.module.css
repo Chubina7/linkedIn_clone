@@ -17,6 +17,9 @@
   font-size: 12px;
   color: grey;
 }
+.numberOfReactions {
+  margin-left: 5px;
+}
 
 .repostsAndComments {
   display: flex;

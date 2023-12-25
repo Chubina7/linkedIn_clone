@@ -5,6 +5,7 @@ import UserPic from "@/components/user/userPic/UserPic";
 import Image from "next/image";
 // photo source import
 import Xx from "/public/svg/xx.svg";
+import FollowBtn from "@/components/buttons/followBtn/FollowBtn";
 
 export default function CreatePostModal({ onClick }) {
   return (
@@ -24,7 +25,9 @@ export default function CreatePostModal({ onClick }) {
           className={styles.textArea}
         ></textarea>
         <div className={styles.postBtnContainer}>
-          <button onClick={onClick}>Post</button>
+          <div style={{ width: "100px" }}>
+            <FollowBtn title="Post" onClick={onClick} />
+          </div>
         </div>
       </div>
       <Backdrop show={true} zIndex={"101"} onClick={onClick} />

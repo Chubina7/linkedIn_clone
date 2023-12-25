@@ -13,7 +13,6 @@ export default function PostInteraction() {
       <Button title="Like" src={LikeIcon} alt="like button" />
       <Button title="Comment" src={CommentIcon} alt="comment button" />
       <Button title="Repost" src={RepostIcon} alt="repost button" />
-      <Button title="Send" src={SendIcon} alt="Send button" />
     </div>
   );
 }

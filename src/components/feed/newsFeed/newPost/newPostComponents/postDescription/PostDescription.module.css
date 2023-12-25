@@ -2,6 +2,7 @@
 .postDescription {
   width: 100%;
   padding: 16px;
+  padding-bottom: 8px;
 }
 .description {
   font-size: 14px;

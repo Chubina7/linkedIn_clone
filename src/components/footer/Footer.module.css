@@ -37,3 +37,9 @@
   cursor: pointer;
   text-decoration: underline;
 }
+
+@media screen and (min-width: 1024px) {
+  .image {
+    object-fit: cover;
+  }
+}
