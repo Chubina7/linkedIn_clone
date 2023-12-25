@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./ExactJob.module.css";
-import UserPic from "@/components/user/userPic/UserPic";
+import UserPic from "@/components/userPic/UserPic";
 import Image from "next/image";
 // Photo source import
-import Xx from "/public/svg/xx.svg"
+import Xx from "/public/svg/xx.svg";
 
 export default function ExactJob() {
   return (

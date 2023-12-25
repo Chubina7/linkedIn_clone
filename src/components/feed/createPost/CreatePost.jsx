@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./CreatePost.module.css";
-import UserPic from "@/components/user/userPic/UserPic";
+import UserPic from "@/components/userPic/UserPic";
 import Button from "@/components/buttons/button/Button";
 import ComponentBg from "@/components/componentBg/componentBg";
 import FunctionalBtn from "./functionalBtn/FunctionalBtn";

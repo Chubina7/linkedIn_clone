@@ -4,7 +4,7 @@ import { React, useEffect, useState } from "react";
 import useSWR from "swr";
 import styles from "./page.module.css";
 import Loading from "@/components/loading/loading";
-import UserPic from "@/components/user/userPic/UserPic";
+import UserPic from "@/components/userPic/UserPic";
 import ComponentBg from "@/components/componentBg/ComponentBg";
 import Footer from "@/components/footer/Footer";
 // Photo source import

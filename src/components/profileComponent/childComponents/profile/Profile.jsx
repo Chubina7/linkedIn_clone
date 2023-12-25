@@ -4,7 +4,7 @@ import Image from "next/image";
 // Photo source import
 import AddFriendIcon from "/public/svg/addFriend.svg";
 import BookmarkIcon from "/public/svg/bookmark.svg";
-import UserPic from "@/components/user/userPic/UserPic";
+import UserPic from "@/components/userPic/UserPic";
 import ComponentBg from "@/components/componentBg/componentBg";
 
 export default function Profile({ moreIsShown }) {

@@ -14,6 +14,7 @@
   padding: 8px 16px;
   cursor: pointer;
   transition: 0.2s ease-in-out;
+  text-wrap: nowrap;
 }
 .followButton:hover {
   background-color: var(--linkdin-blue);

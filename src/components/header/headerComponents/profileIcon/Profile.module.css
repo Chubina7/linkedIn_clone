@@ -5,6 +5,10 @@
   display: none;
 }
 
+.modal {
+  display: none;
+}
+
 /* Responsive */
 @media screen and (min-width: 768px) {
   /* Tablet */
@@ -30,11 +34,10 @@
   .profile:hover .title {
     opacity: 100%;
   }
-  .modalWrapper {
-    width: 270px;
+  .modal {
+    display: block;
     position: absolute;
     top: 55px;
-    right: 220px;
-    z-index: 100;
+    right: 15px;
   }
 }

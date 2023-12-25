@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./UserMayKnow.module.css";
-import UserPic from "@/components/user/userPic/UserPic";
+import UserPic from "@/components/userPic/UserPic";
 import Link from "next/link";
 // Photo source import
 import FollowBtn from "@/components/buttons/followBtn/FollowBtn";

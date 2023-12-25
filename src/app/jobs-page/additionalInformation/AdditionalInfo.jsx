@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./AdditionalInfo.module.css";
 import ComponentBg from "@/components/componentBg/ComponentBg";
-import UserPic from "@/components/user/userPic/UserPic";
+import UserPic from "@/components/userPic/UserPic";
 
 export default function AdditionalInfo() {
   return (

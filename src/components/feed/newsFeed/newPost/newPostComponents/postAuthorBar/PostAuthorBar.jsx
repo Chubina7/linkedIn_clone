@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./PostAuthorBar.module.css";
-import UserPic from "@/components/user/userPic/UserPic";
+import UserPic from "@/components/userPic/UserPic";
 import Image from "next/image";
 // Photo source import
 import PublicIcon from "/public/svg/public.svg";

@@ -1,22 +1,54 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import styles from "./Profile.module.css";
 import Image from "next/image";
 // Photo source import
 import ArrowDown from "/public/svg/downArrow.svg";
-import UserPic from "@/components/user/userPic/UserPic";
-import Modal from "./modal/Modal";
+import LoginImage from "/public/svg/arrowToRight.svg";
+import UserPic from "@/components/userPic/UserPic";
+import ComponentBg from "@/components/componentBg/ComponentBg";
+import FollowBtn from "@/components/buttons/followBtn/FollowBtn";
+import Button from "@/components/buttons/button/Button";
 
 export default function Profile() {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [userLogined, setUserLogined] = useState(false);
+
+  const modalOpenHandler = () => {
+    setModalOpen(!modalOpen);
+  };
   return (
-    <div className={styles.profile}>
-      <UserPic width={24} height={24} />
-      <div className={styles.title}>
-        <p className={styles.text}>Me</p>
-        <Image src={ArrowDown} alt="arrow down" />
+    <div style={{ position: "relative" }}>
+      <div className={styles.profile} onClick={modalOpenHandler}>
+        <UserPic width={24} height={24} />
+        <div className={styles.title}>
+          <p className={styles.text}>Me</p>
+          <Image src={ArrowDown} alt="arrow down" />
+        </div>
       </div>
-      {/* <div className={styles.modalWrapper}>
-        <Modal />
-      </div> */}
+      {modalOpen && (
+        <div className={styles.modal}>
+          <ComponentBg>
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+                padding: "8px",
+              }}
+            >
+              {userLogined ? (
+                <FollowBtn title="View Profile" />
+              ) : (
+                <Button title="Login / Sign Up" src={LoginImage} />
+              )}
+            </div>
+          </ComponentBg>
+        </div>
+      )}
     </div>
   );
 }
