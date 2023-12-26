@@ -19,13 +19,6 @@ const navItems = [
     id: 2,
   },
   { title: "Jobs", src: Jobs, alt: "Jobs", href: "/jobs-page", id: 3 },
-  {
-    title: "Notifications",
-    src: Notifications,
-    alt: "Notifications",
-    href: "/notifications",
-    id: 5,
-  },
 ];
 
 export default function Navbar() {

@@ -10,7 +10,6 @@ import { LoginContext } from "@/context/LoginContext";
 import MediaIcon from "/public/svg/imageIcon.svg";
 import EventIcon from "/public/svg/calendar.svg";
 import WriteArticleIcon from "/public/svg/notes.svg";
-import DefaultImg from "/public/png/defaultImg.png";
 
 export default function CreatePost() {
   const { userLogined } = useContext(LoginContext);
@@ -18,7 +17,7 @@ export default function CreatePost() {
   return (
     <ComponentBg>
       <div className={styles.top}>
-        <UserPic width={48} height={48} src={DefaultImg} />
+        <UserPic width={48} height={48} src={""} />
         <FunctionalBtn /> {/* Client side component */}
       </div>
       <div className={styles.postSuggestionsContainer}>

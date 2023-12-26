@@ -13,7 +13,7 @@ export default function CreatePostModal({ onClick }) {
       <div className={styles.wrapper}>
         <div className={styles.upperContainer}>
           <div className={styles.userInfoContainer}>
-            <UserPic width={56} height={56} />
+            <UserPic width={56} height={56} src={""} />
             <p>UserName UserSurename</p>
           </div>
           <div className={styles.xBtnContainer} onClick={onClick}>

@@ -31,7 +31,7 @@ export default function page({ params }) {
               <h1 className={styles.userName}>
                 {data.firstName} {data.lastName}
               </h1>
-              <p className={styles.userProffesion}>{data.company.title}</p>
+              <p className={styles.userProffesion}>{data.company.title} at "{data.company.name}"</p>
               <p className={styles.userDescription}>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Eligendi quis ex aliquam minima? Repellat, dolores!

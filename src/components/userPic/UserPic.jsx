@@ -3,6 +3,7 @@ import styles from "./UserPic.module.css";
 import Image from "next/image";
 // Photo source import
 import ProfilePic from "/public/jpg/profile.jpg";
+import DefaultImg from "/public/png/defaultImg.png";
 
 export default function UserPic(props) {
   return (
@@ -10,12 +11,11 @@ export default function UserPic(props) {
       style={{
         backgroundColor: "white",
         borderRadius: "100%",
-        display: "flex"
-        
+        display: "flex",
       }}
     >
       <Image
-        src={props.src}
+        src={props.src !== "" ? props.src : DefaultImg}
         alt="profile pic"
         width={props.width}
         height={props.height}
