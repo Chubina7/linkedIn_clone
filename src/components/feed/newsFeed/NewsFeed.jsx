@@ -13,6 +13,9 @@ const getData = async () => {
 
 export default async function NewsFeed() {
   const data = await getData();
+
+  console.log(data);
+
   return (
     <section className={styles.wrapper}>
       {data.map((item) => {
