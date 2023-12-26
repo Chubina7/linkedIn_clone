@@ -12,7 +12,7 @@ export default function header() {
         <div className={styles.container}>
           <LeftFloater />
           <Navbar />
-          <RightFloater />
+          {/* <RightFloater /> */}
         </div>
       </div>
     </header>

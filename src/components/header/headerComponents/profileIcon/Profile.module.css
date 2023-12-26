@@ -8,10 +8,11 @@
 .modal {
   display: none;
 }
+.backdrop {
+  display: none;
+}
 
-/* Responsive */
 @media screen and (min-width: 768px) {
-  /* Tablet */
   .profile {
     user-select: none;
     cursor: pointer;
