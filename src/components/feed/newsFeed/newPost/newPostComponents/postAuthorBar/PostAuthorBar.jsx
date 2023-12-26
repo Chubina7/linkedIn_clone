@@ -43,7 +43,7 @@ export default function PostAuthorBar({
           </div>
         </div>
       </div>
-      <div className={styles.rightContainer}>
+      {/* <div className={styles.rightContainer}>
         <div className={styles.optionsBg}>
           <Image
             src={ThreeDots}
@@ -54,7 +54,7 @@ export default function PostAuthorBar({
         <div className={styles.optionsBg}>
           <Image src={Xx} alt="x" className={styles.x} />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
