@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import styles from "./CreatePostModal.module.css";
 import Backdrop from "@/components/backdrop/Backdrop";
 import UserPic from "@/components/userPic/UserPic";
@@ -6,14 +8,65 @@ import Image from "next/image";
 // photo source import
 import Xx from "/public/svg/xx.svg";
 import FollowBtn from "@/components/buttons/followBtn/FollowBtn";
+import { useRouter } from "next/navigation";
 
 export default function CreatePostModal({ onClick }) {
+  const [authorName, setAuthorName] = useState("");
+  const [authorSurename, setAuthorSurename] = useState("");
+  const [authorWorkPlace, setAuthorWorkPlace] = useState("");
+  const [authorWorkTitle, setAuthorWorkTitle] = useState("");
+  const [authorProfileImage, setAuthorProfileImage] = useState("");
+  const [postUploadDate, setPostUploadDate] = useState("");
+  const [postDescription, setPostDescription] = useState("");
+  const [postContent, setPostContent] = useState(null);
+  const [postLikes, setPostLikes] = useState(0);
+  const [postComments, setPostComments] = useState(0);
+
+  const router = useRouter();
+
+  const textAreaChangeHandler = (e) => {
+    setPostDescription(e.target.value);
+    setPostUploadDate(Date.now());
+
+    setAuthorName("The request name");
+    setAuthorSurename("The request surename");
+    setAuthorWorkPlace("the request workplace");
+    setAuthorWorkTitle("the request worktitle");
+    setAuthorProfileImage("https://robohash.org/test.jpg");
+  };
+
+  const requestHandler = async () => {
+    try {
+      if (postDescription !== "") {
+        await fetch("http://localhost:3000/api/posts", {
+          method: "POST",
+          body: JSON.stringify({
+            authorName,
+            authorSurename,
+            authorWorkPlace,
+            authorWorkTitle,
+            authorProfileImage,
+            postUploadDate,
+            postDescription,
+            postContent,
+            postLikes,
+            postComments,
+          }),
+        });
+      } else {
+        console.log("carielia dzmaaao");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+    router.push("/");
+  };
   return (
     <>
       <div className={styles.wrapper}>
         <div className={styles.upperContainer}>
           <div className={styles.userInfoContainer}>
-            <UserPic width={56} height={56} src={""} />
+            <UserPic width={56} height={56} src={""} alt="profile pic" />
             <p>UserName UserSurename</p>
           </div>
           <div className={styles.xBtnContainer} onClick={onClick}>
@@ -23,10 +76,11 @@ export default function CreatePostModal({ onClick }) {
         <textarea
           placeholder="What do you want to talk about"
           className={styles.textArea}
+          onChange={textAreaChangeHandler}
         ></textarea>
         <div className={styles.postBtnContainer}>
           <div style={{ width: "100px" }}>
-            <FollowBtn title="Post" onClick={onClick} />
+            <FollowBtn title="Post" onClick={requestHandler} />
           </div>
         </div>
       </div>
