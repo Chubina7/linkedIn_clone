@@ -16,15 +16,13 @@ export default function ProfileComponent() {
   const showMoreHandler = () => {
     setMoreShown(!moreShown);
   };
-
+  const resizeHandler = () => {
+    setWindowWidth(window.innerWidth);
+  };
   useEffect(() => {
-    window.addEventListener("resize", () => {
-      setWindowWidth(window.innerWidth);
-    });
+    window.addEventListener("resize", resizeHandler);
     return () => {
-      window.removeEventListener("resize", () => {
-        setWindowWidth(window.innerWidth);
-      });
+      window.removeEventListener("resize", resizeHandler);
     };
   }, []);
 

@@ -11,7 +11,7 @@ export default function Footer({ children }) {
     <footer className={styles.footer}>
       <ComponentBg>
         {children}
-        <Image src={FooterImg} alt="ad photo" className={styles.image} />
+        <Image src={FooterImg} alt="ad photo" className={styles.image} prio />
       </ComponentBg>
       <div className={styles.reservation}>
         <Link
