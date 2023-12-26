@@ -22,7 +22,6 @@ export default function BulletMenu() {
       <div className={styles.burgerMenu} onClick={modalOpenHandler}>
         <Image src={Bullets} className={styles.navItem} alt="bulets" />
       </div>
-      {modalOpen && <Backdrop show={true} onClick={modalCloseHandler} />}
     </>
   );
 }

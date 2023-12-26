@@ -5,25 +5,18 @@
   align-items: center;
   gap: 15px;
 }
-.navItems {
-  display: none;
-}
 
 .rightFloater,
 .text {
   display: none;
 }
 
-/* Responsive */
-@media screen and (min-width: 425px) {
-  /* Mobile L */
-  .navItems {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
+.navItems {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 @media screen and (min-width: 768px) {
