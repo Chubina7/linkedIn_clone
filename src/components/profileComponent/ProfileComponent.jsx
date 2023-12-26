@@ -1,15 +1,17 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "./ProfileComponent.module.css";
 import Image from "next/image";
 import DiscoverMore from "./childComponents/discoverMore/DiscoverMore";
 import Profile from "./childComponents/profile/Profile";
+import { LoginContext } from "@/context/LoginContext";
 // Photo source import
 import DowrnArrow from "/public/svg/arrow-down.svg";
 import UpArrow from "/public/svg/arrow-up.svg";
 
 export default function ProfileComponent() {
+  const { userLogined } = useContext(LoginContext);
   const [moreShown, setMoreShown] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
