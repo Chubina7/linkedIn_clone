@@ -18,7 +18,7 @@ import { useRouter } from "next/navigation";
 
 export default function Profile() {
   const router = useRouter();
-  const { userLogined, userImage } = useContext(LoginContext);
+  const { userLogined, userImage, userName } = useContext(LoginContext);
   const modalRef = useRef(null);
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -64,7 +64,9 @@ export default function Profile() {
               >
                 {userLogined ? (
                   <>
-                    <FollowBtn title="View Profile" />
+                    <Link href={`/loginedUser/${userName}`}>
+                      <FollowBtn title="View Profile" />
+                    </Link>
                     <p
                       style={{
                         fontSize: "14px",

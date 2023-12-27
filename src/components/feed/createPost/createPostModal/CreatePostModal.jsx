@@ -52,7 +52,7 @@ export default function CreatePostModal({ onClick }) {
           }),
         });
       } else {
-        console.log("carielia dzmaaao");
+        console.log("Fill the gaps");
       }
     } catch (error) {
       console.log(error);

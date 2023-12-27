@@ -20,7 +20,6 @@ export default async function NewsFeed() {
         return (
           <NewPost
             authorName={item.authorName}
-            authorSurename={item.authorSurename}
             authorWorkPlace={item.authorWorkPlace}
             authorWorkTitle={item.authorWorkTitle}
             authorProfileImage={item.authorProfileImage}

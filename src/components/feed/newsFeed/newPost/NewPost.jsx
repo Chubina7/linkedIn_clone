@@ -8,7 +8,6 @@ import ComponentBg from "@/components/componentBg/componentBg";
 
 export default function NewPost({
   authorName,
-  authorSurename,
   authorWorkPlace,
   authorWorkTitle,
   authorProfileImage,
@@ -22,7 +21,6 @@ export default function NewPost({
     <ComponentBg>
       <PostAuthorBar
         authorName={authorName}
-        authorSurename={authorSurename}
         authorWorkPlace={authorWorkPlace}
         authorWorkTitle={authorWorkTitle}
         authorProfileImage={authorProfileImage}

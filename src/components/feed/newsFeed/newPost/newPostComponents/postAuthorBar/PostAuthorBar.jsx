@@ -9,7 +9,6 @@ import Xx from "/public/svg/xx.svg";
 
 export default function PostAuthorBar({
   authorName,
-  authorSurename,
   authorWorkPlace,
   authorWorkTitle,
   authorProfileImage,
@@ -21,7 +20,7 @@ export default function PostAuthorBar({
         <UserPic width={48} height={48} src={authorProfileImage} />
         <div className={styles.textContent}>
           <p className={styles.postAuthorName}>
-            {authorName} {authorSurename}
+            {authorName}
           </p>
           <p className={styles.postAuthorFollowers}>
             {authorWorkTitle} at {authorWorkPlace}

@@ -1,7 +1,6 @@
 "use client";
 
 import { React, useEffect, useState } from "react";
-import useSWR from "swr";
 import styles from "./page.module.css";
 import Loading from "@/components/loading/loading";
 import UserPic from "@/components/userPic/UserPic";
@@ -10,13 +9,17 @@ import Footer from "@/components/footer/Footer";
 // Photo source import
 import FollowBtn from "@/components/buttons/followBtn/FollowBtn";
 
-const fetcher = (...args) => fetch(...args).then((res) => res.json());
-
 export default function page({ params }) {
-  const { data, error } = useSWR(
-    `https://dummyjson.com/users/${params.user}`,
-    fetcher
-  );
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    const getDummyData = async () => {
+      const resp = await fetch(`https://dummyjson.com/users/${params.user}`);
+      const result = await resp.json();
+      setData(result);
+    };
+    const getLoginedUserData = async () => {};
+    getDummyData();
+  }, []);
 
   return (
     <main className={styles.main}>
@@ -31,7 +34,9 @@ export default function page({ params }) {
               <h1 className={styles.userName}>
                 {data.firstName} {data.lastName}
               </h1>
-              <p className={styles.userProffesion}>{data.company.title} at "{data.company.name}"</p>
+              <p className={styles.userProffesion}>
+                {data.company.title} at "{data.company.name}"
+              </p>
               <p className={styles.userDescription}>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Eligendi quis ex aliquam minima? Repellat, dolores!
