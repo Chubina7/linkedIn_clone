@@ -40,6 +40,8 @@ export default function page() {
           <div className={styles.inputField}>
             <p className={styles.inputText}>Name</p>
             <input
+              name="name"
+              id="name"
               type="text"
               className={styles.input}
               required
@@ -51,6 +53,8 @@ export default function page() {
           <div className={styles.inputField}>
             <p className={styles.inputText}>Surename</p>
             <input
+              name="surename"
+              id="surename"
               type="text"
               className={styles.input}
               required
@@ -62,6 +66,8 @@ export default function page() {
           <div className={styles.inputField}>
             <p className={styles.inputText}>Email</p>
             <input
+              name="email"
+              id="email"
               type="email"
               className={styles.input}
               required
@@ -73,6 +79,8 @@ export default function page() {
           <div className={styles.inputField}>
             <p className={styles.inputText}>Password</p>
             <input
+              name="password"
+              id="password"
               type="password"
               className={styles.input}
               required

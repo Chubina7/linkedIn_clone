@@ -10,16 +10,13 @@ try {
     const userSchema = new Schema({
         name: {
             type: String,
-            required: true,
         },
         surename: {
             type: String,
-            required: true,
         },
         email: {
             type: String,
             unique: true,
-            required: true,
         },
         phoneNumber: {
             type: Number,
@@ -33,15 +30,12 @@ try {
         },
         workPlace: {
             type: String,
-            required: true,
         },
         workTitle: {
             type: String,
-            required: true,
         },
         followers: {
             type: String,
-            required: true,
         },
         posts: {},
 

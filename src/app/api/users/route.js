@@ -12,3 +12,16 @@ export const GET = async (request) => {
         return new NextResponse("Database Error ;(", { status: 500 })
     }
 }
+
+export const POST = async (request) => {
+    const body = await request.json()
+    const newUser = new User(body)
+
+    try {
+        await connect()
+        await newUser.save()
+        return new NextResponse("User Has Been Created", { status: 201 })
+    } catch (error) {
+        return new NextResponse("Database Error ;(", { status: 500 })
+    }
+}

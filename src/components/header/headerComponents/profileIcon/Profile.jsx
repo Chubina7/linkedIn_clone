@@ -14,8 +14,10 @@ import ArrowDown from "/public/svg/downArrow.svg";
 import LoginImage from "/public/svg/arrowToRight.svg";
 import DefaultImg from "/public/png/defaultImg.png";
 import { signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 export default function Profile() {
+  const router = useRouter();
   const { userLogined, userImage } = useContext(LoginContext);
   const modalRef = useRef(null);
   const [modalOpen, setModalOpen] = useState(false);
@@ -70,7 +72,10 @@ export default function Profile() {
                         textDecoration: "underline",
                         cursor: "pointer",
                       }}
-                      onClick={signOut}
+                      onClick={() => {
+                        signOut();
+                        router.push("/login");
+                      }}
                     >
                       Log Out
                     </p>

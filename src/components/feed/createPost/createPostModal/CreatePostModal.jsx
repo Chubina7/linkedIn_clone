@@ -14,7 +14,6 @@ import Xx from "/public/svg/xx.svg";
 export default function CreatePostModal({ onClick }) {
   const router = useRouter();
   const { userImage, userName } = useContext(LoginContext);
-
   const [authorName, setAuthorName] = useState("");
   const [authorSurename, setAuthorSurename] = useState("");
   const [authorWorkPlace, setAuthorWorkPlace] = useState("");
@@ -24,15 +23,15 @@ export default function CreatePostModal({ onClick }) {
   const [postContent, setPostContent] = useState(null);
   const [postLikes, setPostLikes] = useState(0);
   const [postComments, setPostComments] = useState(0);
-
+  
   const textAreaChangeHandler = (e) => {
     setPostDescription(e.target.value);
-
-    setAuthorName("The request name");
-    setAuthorSurename("The request surename");
+    
+    setAuthorName(userName);
+    setAuthorSurename(userName);
     setAuthorWorkPlace("the request workplace");
     setAuthorWorkTitle("the request worktitle");
-    setAuthorProfileImage("https://robohash.org/test.jpg");
+    setAuthorProfileImage(userImage);
   };
 
   const requestHandler = async () => {
@@ -46,7 +45,6 @@ export default function CreatePostModal({ onClick }) {
             authorWorkPlace,
             authorWorkTitle,
             authorProfileImage,
-            postUploadDate,
             postDescription,
             postContent,
             postLikes,

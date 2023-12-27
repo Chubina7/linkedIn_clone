@@ -31,6 +31,30 @@ export default function ProfileComponent() {
   };
 
   useEffect(() => {
+    // if (session.status === "authenticated") {
+    //   const userPostReq = async () => {
+    //     try {
+    //       const resp = await fetch("http://localhost:3000/api/users", {
+    //         method: "POST",
+    //         body: JSON.stringify({
+    //           name: session?.data?.user?.name,
+    //           surename: "",
+    //           email: session?.data?.user?.email,
+    //           phoneNumber: "",
+    //           profileImage: session?.data?.user?.image,
+    //           backgroundImage: "",
+    //           workPlace: "",
+    //           workTitle: "",
+    //           followers: 0,
+    //           posts: 0,
+    //         }),
+    //       });
+    //     } catch (error) {
+    //       console.log(error);
+    //     }
+    //   };
+    //   userPostReq();
+    // }
     window.addEventListener("resize", resizeHandler);
     return () => {
       window.removeEventListener("resize", resizeHandler);

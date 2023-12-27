@@ -16,7 +16,7 @@ export default async function NewsFeed() {
 
   return (
     <section className={styles.wrapper}>
-      {data.map((item) => {
+      {data.reverse().map((item) => {
         return (
           <NewPost
             authorName={item.authorName}

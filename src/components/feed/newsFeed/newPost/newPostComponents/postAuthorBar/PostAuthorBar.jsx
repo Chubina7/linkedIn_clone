@@ -28,13 +28,13 @@ export default function PostAuthorBar({
           </p>
           <div className={styles.postDetailsContainer}>
             <p className={styles.postUploadDate}>
+              {postUploadDate.split("T")[0]},{" "}
               {postUploadDate
-                // .split(" ")
-                // .splice(0, 5)[4]
-                // .split(":")
-                // .splice(0, 2)
-                // .join(":")
-                }
+                .split("T")[1]
+                .split(".")[0]
+                .split(":")
+                .splice(0, 2)
+                .join(":")}
             </p>
             <Image
               src={PublicIcon}

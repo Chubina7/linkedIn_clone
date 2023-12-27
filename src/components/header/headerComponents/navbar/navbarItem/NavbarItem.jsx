@@ -5,16 +5,14 @@ import styles from "./NavbarItem.module.css";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-export default function NavbarItem({ className, src, alt, key, title, href }) {
+export default function NavbarItem({ src, alt, title, href }) {
   const pathName = usePathname();
   return (
     <Link href={href}>
       <div
-        className={`${styles.wrapper} ${
-          pathName == href ? styles.active : ""
-        }`}
+        className={`${styles.wrapper} ${pathName == href ? styles.active : ""}`}
       >
-        <Image className={styles.navItem} src={src} alt={alt} key={key} />
+        <Image className={styles.navItem} src={src} alt={alt} />
         <p className={styles.title}>{title}</p>
       </div>
     </Link>
