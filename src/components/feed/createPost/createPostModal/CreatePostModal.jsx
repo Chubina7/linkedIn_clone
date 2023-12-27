@@ -1,32 +1,32 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./CreatePostModal.module.css";
 import Backdrop from "@/components/backdrop/Backdrop";
 import UserPic from "@/components/userPic/UserPic";
 import Image from "next/image";
-// photo source import
-import Xx from "/public/svg/xx.svg";
 import FollowBtn from "@/components/buttons/followBtn/FollowBtn";
 import { useRouter } from "next/navigation";
+import { LoginContext } from "@/context/LoginContext";
+// photo source import
+import Xx from "/public/svg/xx.svg";
 
 export default function CreatePostModal({ onClick }) {
+  const router = useRouter();
+  const { userImage, userName } = useContext(LoginContext);
+
   const [authorName, setAuthorName] = useState("");
   const [authorSurename, setAuthorSurename] = useState("");
   const [authorWorkPlace, setAuthorWorkPlace] = useState("");
   const [authorWorkTitle, setAuthorWorkTitle] = useState("");
   const [authorProfileImage, setAuthorProfileImage] = useState("");
-  const [postUploadDate, setPostUploadDate] = useState("");
   const [postDescription, setPostDescription] = useState("");
   const [postContent, setPostContent] = useState(null);
   const [postLikes, setPostLikes] = useState(0);
   const [postComments, setPostComments] = useState(0);
 
-  const router = useRouter();
-
   const textAreaChangeHandler = (e) => {
     setPostDescription(e.target.value);
-    setPostUploadDate(Date.now());
 
     setAuthorName("The request name");
     setAuthorSurename("The request surename");
@@ -61,13 +61,14 @@ export default function CreatePostModal({ onClick }) {
     }
     router.push("/");
   };
+
   return (
     <>
       <div className={styles.wrapper}>
         <div className={styles.upperContainer}>
           <div className={styles.userInfoContainer}>
-            <UserPic width={56} height={56} src={""} alt="profile pic" />
-            <p>UserName UserSurename</p>
+            <UserPic width={56} height={56} src={userImage} alt="profile pic" />
+            <p>{userName}</p>
           </div>
           <div className={styles.xBtnContainer} onClick={onClick}>
             <Image src={Xx} width={18} height={18} style={{ opacity: "60%" }} />

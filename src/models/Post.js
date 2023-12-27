@@ -27,10 +27,6 @@ try {
         authorProfileImage: {
             type: String,
         },
-        postUploadDate: {
-            type: String,
-            required: true,
-        },
         postDescription: {
             type: String,
         },

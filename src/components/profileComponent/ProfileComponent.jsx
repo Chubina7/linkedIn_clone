@@ -13,9 +13,13 @@ import LoginImage from "/public/svg/arrowToRight.svg";
 import DowrnArrow from "/public/svg/arrow-down.svg";
 import UpArrow from "/public/svg/arrow-up.svg";
 import FollowBtn from "../buttons/followBtn/FollowBtn";
+import { useSession } from "next-auth/react";
+import Loading from "../loading/Loading";
 
 export default function ProfileComponent() {
-  const { userLogined } = useContext(LoginContext);
+  const session = useSession();
+
+  const { userLogined, userImage, userName } = useContext(LoginContext);
   const [moreShown, setMoreShown] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -25,6 +29,7 @@ export default function ProfileComponent() {
   const resizeHandler = () => {
     setWindowWidth(window.innerWidth);
   };
+
   useEffect(() => {
     window.addEventListener("resize", resizeHandler);
     return () => {
@@ -36,7 +41,11 @@ export default function ProfileComponent() {
     <aside className={styles.wrapper}>
       {userLogined ? (
         <>
-          <Profile moreIsShown={windowWidth > 768 || moreShown} />
+          <Profile
+            moreIsShown={windowWidth > 768 || moreShown}
+            src={userImage}
+            name={userName}
+          />
           {(windowWidth > 768 || moreShown) && <DiscoverMore />}
           <div className={styles.showMoreBar} onClick={showMoreHandler}>
             <div className={styles.hoverContainer}>

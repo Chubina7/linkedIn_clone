@@ -7,14 +7,14 @@ import ComponentBg from "@/components/componentBg/componentBg";
 import AddFriendIcon from "/public/svg/addFriend.svg";
 import BookmarkIcon from "/public/svg/bookmark.svg";
 
-export default function Profile({ moreIsShown }) {
+export default function Profile({ moreIsShown, src, name }) {
   return (
     <ComponentBg>
       <div className={styles.backgroundImg}></div>
       <div className={styles.identifierContainer}>
         <div className={styles.identifier}>
-          <UserPic height={72} width={72} src={""} />
-          <p className={styles.userName}>Name Surename </p>
+          <UserPic height={72} width={72} src={src} />
+          <p className={styles.userName}>{name}</p>
         </div>
         <p className={styles.userDescription}>- -</p>
       </div>

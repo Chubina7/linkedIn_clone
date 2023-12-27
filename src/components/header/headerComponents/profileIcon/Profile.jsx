@@ -13,9 +13,10 @@ import Link from "next/link";
 import ArrowDown from "/public/svg/downArrow.svg";
 import LoginImage from "/public/svg/arrowToRight.svg";
 import DefaultImg from "/public/png/defaultImg.png";
+import { signOut } from "next-auth/react";
 
 export default function Profile() {
-  const { userLogined } = useContext(LoginContext);
+  const { userLogined, userImage } = useContext(LoginContext);
   const modalRef = useRef(null);
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -39,7 +40,7 @@ export default function Profile() {
   return (
     <div style={{ position: "relative", height: "100%" }}>
       <div className={styles.profile} onClick={modalOpenHandler}>
-        <UserPic width={24} height={24} src={DefaultImg} />
+        <UserPic width={24} height={24} src={userImage} />
         <div className={styles.title}>
           <p className={styles.text}>Me</p>
           <Image src={ArrowDown} alt="arrow down" />
@@ -60,7 +61,20 @@ export default function Profile() {
                 }}
               >
                 {userLogined ? (
-                  <FollowBtn title="View Profile" />
+                  <>
+                    <FollowBtn title="View Profile" />
+                    <p
+                      style={{
+                        fontSize: "14px",
+                        opacity: "60%",
+                        textDecoration: "underline",
+                        cursor: "pointer",
+                      }}
+                      onClick={signOut}
+                    >
+                      Log Out
+                    </p>
+                  </>
                 ) : (
                   <Link href={"/login"}>
                     <Button title="Login / Sign Up" src={LoginImage} />

@@ -12,12 +12,12 @@ import EventIcon from "/public/svg/calendar.svg";
 import WriteArticleIcon from "/public/svg/notes.svg";
 
 export default function CreatePost() {
-  const { userLogined } = useContext(LoginContext);
+  const { userLogined, userImage } = useContext(LoginContext);
 
   return (
     <ComponentBg>
       <div className={styles.top}>
-        <UserPic width={48} height={48} src={""} />
+        <UserPic width={48} height={48} src={userImage} />
         <FunctionalBtn /> {/* Client side component */}
       </div>
       <div className={styles.postSuggestionsContainer}>

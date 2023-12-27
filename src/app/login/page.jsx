@@ -1,12 +1,9 @@
 import React from "react";
 import styles from "./page.module.css";
-import Image from "next/image";
 // Photo source import
 import GoogleLogo from "/public/png/googleLogo.png";
-import GitHubLogo from "/public/png/gitHubLogo.png";
 import Link from "next/link";
 import ProviderBtn from "./providerBtn/ProviderBtn";
-import { signIn, useSession } from "next-auth/react";
 
 export default function page() {
   return (
@@ -41,7 +38,6 @@ export default function page() {
             alt={"google icon"}
             action={"google"}
           />
-          {/* <ProviderBtn src={GitHubLogo} title={"Github"} alt={"github icon"} onClick={() => signIn("github")} /> */}
         </div>
         <Link href={"/register"} style={{ width: "100%", textAlign: "center" }}>
           <button className={styles.registerBtn}>

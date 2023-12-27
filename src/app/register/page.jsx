@@ -84,36 +84,6 @@ export default function page() {
           <button className={styles.signInBtn} onClick={signInHandler}>
             Sign In
           </button>
-          <p
-            style={{
-              fontSize: "14px",
-              opacity: "70%",
-              fontStyle: "italic",
-              textAlign: "center",
-            }}
-          >
-            OR <br /> Sign up using
-          </p>
-          <div className={styles.provider}>
-            <p>Google</p>
-            <Image
-              src={GoogleLogo}
-              width={18}
-              height={18}
-              alt="google logo
-            "
-            />
-          </div>
-          <div className={styles.provider}>
-            <p>GitHub</p>
-            <Image
-              src={GitHubLogo}
-              width={18}
-              height={18}
-              alt="google logo
-            "
-            />
-          </div>
         </div>
         {error && (
           <p style={{ color: "red" }}>Somthing went wrong! check fields</p>
