@@ -18,7 +18,6 @@
 }
 
 .heading {
-  color: rgb(178, 64, 32);
   font-weight: 300;
 }
 
@@ -72,28 +71,26 @@
   cursor: pointer;
   background-color: #005380;
 }
-.registerBtn {
+
+.provider {
   width: 100%;
-  color: black;
+  padding: 8px 16px;
   border: 2px solid black;
   border-radius: 26px;
-  font-size: 16px;
-  padding: 10px 16px;
-  opacity: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.registerBtn:hover {
+.provider:hover {
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-
-
 
 @media screen and (min-width: 768px) {
   .input,
   .signInBtn,
   .provider,
-  .inputText,
-  .registerBtn {
+  .inputText {
     max-width: 450px;
   }
 }

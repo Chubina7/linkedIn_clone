@@ -4,6 +4,9 @@ import Image from "next/image";
 // Photo source import
 import GoogleLogo from "/public/png/googleLogo.png";
 import GitHubLogo from "/public/png/gitHubLogo.png";
+import Link from "next/link";
+import ProviderBtn from "./providerBtn/ProviderBtn";
+import { signIn, useSession } from "next-auth/react";
 
 export default function page() {
   return (
@@ -15,37 +18,36 @@ export default function page() {
         <div className={styles.loginForm}>
           <div className={styles.inputField}>
             <p className={styles.inputText}>Email</p>
-            <input type="text" name="" id="" className={styles.input} />
+            <input type="email" className={styles.input} required />
           </div>
           <div className={styles.inputField}>
             <p className={styles.inputText}>Password</p>
-            <input type="text" name="" id="" className={styles.input} />
+            <input type="password" className={styles.input} required />
           </div>
           <button className={styles.signInBtn}>Sign In</button>
-          <p style={{ fontSize: "14px", opacity: "70%", fontStyle: "italic" }}>
-            OR Sign In Using
+          <p
+            style={{
+              fontSize: "14px",
+              opacity: "70%",
+              fontStyle: "italic",
+              textAlign: "center",
+            }}
+          >
+            OR <br /> Sign in using
           </p>
-          <div className={styles.provider}>
-            <p>Google</p>
-            <Image
-              src={GoogleLogo}
-              width={18}
-              height={18}
-              alt="google logo
-            "
-            />
-          </div>
-          <div className={styles.provider}>
-            <p>GitHub</p>
-            <Image
-              src={GitHubLogo}
-              width={18}
-              height={18}
-              alt="google logo
-            "
-            />
-          </div>
+          <ProviderBtn
+            src={GoogleLogo}
+            title={"Google"}
+            alt={"google icon"}
+            action={"google"}
+          />
+          {/* <ProviderBtn src={GitHubLogo} title={"Github"} alt={"github icon"} onClick={() => signIn("github")} /> */}
         </div>
+        <Link href={"/register"} style={{ width: "100%", textAlign: "center" }}>
+          <button className={styles.registerBtn}>
+            New to LinkedIn? Join now
+          </button>
+        </Link>
       </div>
     </main>
   );

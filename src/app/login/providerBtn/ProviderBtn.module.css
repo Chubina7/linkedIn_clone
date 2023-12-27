@@ -1,0 +1,18 @@
+.provider {
+  width: 100%;
+  padding: 8px 16px;
+  border: 2px solid black;
+  border-radius: 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.provider:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+@media screen and (min-width: 768px) {
+  .provider {
+    max-width: 450px;
+  }
+}

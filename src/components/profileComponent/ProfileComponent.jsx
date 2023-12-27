@@ -6,9 +6,13 @@ import Image from "next/image";
 import DiscoverMore from "./childComponents/discoverMore/DiscoverMore";
 import Profile from "./childComponents/profile/Profile";
 import { LoginContext } from "@/context/LoginContext";
+import Link from "next/link";
+import Button from "../buttons/button/Button";
 // Photo source import
+import LoginImage from "/public/svg/arrowToRight.svg";
 import DowrnArrow from "/public/svg/arrow-down.svg";
 import UpArrow from "/public/svg/arrow-up.svg";
+import FollowBtn from "../buttons/followBtn/FollowBtn";
 
 export default function ProfileComponent() {
   const { userLogined } = useContext(LoginContext);
@@ -30,18 +34,26 @@ export default function ProfileComponent() {
 
   return (
     <aside className={styles.wrapper}>
-      <Profile moreIsShown={windowWidth > 768 || moreShown} />
-      {(windowWidth > 768 || moreShown) && <DiscoverMore />}
-      <div className={styles.showMoreBar} onClick={showMoreHandler}>
-        <div className={styles.hoverContainer}>
-          <p className={styles.text}>Show {moreShown ? "Less" : "More"}</p>
-          <Image
-            src={moreShown ? UpArrow : DowrnArrow}
-            alt="dropDown/dropUp"
-            className={styles.arrow}
-          />
-        </div>
-      </div>
+      {userLogined ? (
+        <>
+          <Profile moreIsShown={windowWidth > 768 || moreShown} />
+          {(windowWidth > 768 || moreShown) && <DiscoverMore />}
+          <div className={styles.showMoreBar} onClick={showMoreHandler}>
+            <div className={styles.hoverContainer}>
+              <p className={styles.text}>Show {moreShown ? "Less" : "More"}</p>
+              <Image
+                src={moreShown ? UpArrow : DowrnArrow}
+                alt="dropDown/dropUp"
+                className={styles.arrow}
+              />
+            </div>
+          </div>
+        </>
+      ) : (
+        <Link href={"/login"}>
+          <FollowBtn title="Login / Sign Up" src={LoginImage} />
+        </Link>
+      )}
     </aside>
   );
 }
