@@ -29,7 +29,6 @@ export const LoginProvider = ({ children }) => {
 
     return (
         <LoginContext.Provider value={{ userLogined, userImage, userName, userEmail }}>
-            {session.status == "loading" && <Loading />}
             {children}
         </LoginContext.Provider>
     )
