@@ -1,36 +1,51 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import styles from "./NewsFeed.module.css";
 import NewPost from "./newPost/NewPost";
 
-const getData = async () => {
-  const response = await fetch("http://localhost:3000/api/posts");
-  const result = await response.json();
-  if (!response.ok) {
-    throw new Error("Error occuired");
-  }
-  return result;
-};
+export default function NewsFeed() {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-export default async function NewsFeed() {
-  const data = await getData();
-
+  useEffect(() => {
+    const getData = async () => {
+      const response = await fetch("http://localhost:3000/api/posts", {
+        next: { revalidate: false },
+      });
+      const result = await response.json();
+      if (!response.ok) {
+        throw new Error("Error occuired");
+      }
+      setData(result);
+      setLoading(false);
+    };
+    getData();
+  }, [data]);
   return (
     <section className={styles.wrapper}>
-      {data.reverse().map((item) => {
-        return (
-          <NewPost
-            authorName={item.authorName}
-            authorWorkPlace={item.authorWorkPlace}
-            authorWorkTitle={item.authorWorkTitle}
-            authorProfileImage={item.authorProfileImage}
-            postUploadDate={item.createdAt}
-            postDescription={item.postDescription}
-            postContent={item.postContent}
-            postLikes={item.postLikes}
-            postComments={item.postComments}
-          />
-        );
-      })}
+      {loading ? (
+        <p>Fetching...</p>
+      ) : (
+        data
+          .slice()
+          .reverse()
+          .map((item) => {
+            return (
+              <NewPost
+                authorName={item.authorName}
+                authorWorkPlace={item.authorWorkPlace}
+                authorWorkTitle={item.authorWorkTitle}
+                authorProfileImage={item.authorProfileImage}
+                postUploadDate={item.createdAt}
+                postDescription={item.postDescription}
+                postContent={item.postContent}
+                postLikes={item.postLikes}
+                postComments={item.postComments}
+              />
+            );
+          })
+      )}
     </section>
   );
 }

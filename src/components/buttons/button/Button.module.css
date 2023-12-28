@@ -7,6 +7,7 @@
   padding: 0 10px;
   border-radius: 6px;
 }
+
 .container:hover {
   cursor: pointer;
   background-color: var(--hover-bg-color);
@@ -20,6 +21,7 @@
 .text {
   display: none;
 }
+
 @media screen and (min-width: 768px) {
   .text {
     display: block;

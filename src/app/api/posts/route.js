@@ -19,7 +19,7 @@ export const POST = async (request) => {
     try {
         await connect()
         await newPost.save()
-        return new NextResponse("Post Has Been Created", { status: 201 })
+        return new NextResponse(JSON.stringify(newPost), { status: 201 })
     } catch (error) {
         return new NextResponse("Database Error ;(", { status: 500 })
     }

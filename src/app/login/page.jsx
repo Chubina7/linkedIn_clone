@@ -7,10 +7,12 @@ import GoogleLogo from "/public/png/googleLogo.png";
 import Link from "next/link";
 import ProviderBtn from "./providerBtn/ProviderBtn";
 import { useSession } from "next-auth/react";
-import Loading from "@/components/loading/Loading";
 
 export default function page() {
   const session = useSession();
+  if (session.status === "loading") {
+    alert("Succsesfully logined");
+  }
   return (
     <main className={styles.main}>
       <div className={styles.wrapper}>

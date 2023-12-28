@@ -60,8 +60,7 @@
 .optionsBg:hover {
   background-color: var(--secondary-color);
 }
-.threeDots,
-.x {
+.threeDots {
   height: 24px;
   width: 24px;
   object-fit: cover;

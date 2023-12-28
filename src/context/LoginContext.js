@@ -1,5 +1,6 @@
 "use client"
 
+import Loading from "@/components/loading/Loading"
 import { useSession } from "next-auth/react"
 import { createContext, useEffect, useState } from "react"
 
@@ -18,9 +19,13 @@ export const LoginProvider = ({ children }) => {
     const [userEmail, setUserEmail] = useState("")
 
     useEffect(() => {
-        if (session.status == "unauthenticated") setUserLogined(false)
+        if (session.status == "unauthenticated") {
+            setLoading(false)
+            setUserLogined(false)
+        }
         if (session.status == "loading") setLoading(true)
         if (session.status == "authenticated") {
+            setLoading(false)
             setUserLogined(true)
             setUserImage(session.data?.user?.image)
             setUserName(session.data?.user?.name)
@@ -51,6 +56,7 @@ export const LoginProvider = ({ children }) => {
 
     return (
         <LoginContext.Provider value={{ userLogined, userImage, userName, userEmail, loading }}>
+            {loading && <Loading />}
             {children}
         </LoginContext.Provider>
     )

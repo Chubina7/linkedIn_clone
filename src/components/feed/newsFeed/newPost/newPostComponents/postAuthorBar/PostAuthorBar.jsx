@@ -4,8 +4,8 @@ import UserPic from "@/components/userPic/UserPic";
 import Image from "next/image";
 // Photo source import
 import PublicIcon from "/public/svg/public.svg";
-import ThreeDots from "/public/svg/dots.svg";
-import Xx from "/public/svg/xx.svg";
+import { useSession } from "next-auth/react";
+import DeletePost from "./deletePost/DeletePost";
 
 export default function PostAuthorBar({
   authorName,
@@ -14,14 +14,13 @@ export default function PostAuthorBar({
   authorProfileImage,
   postUploadDate,
 }) {
+  const session = useSession();
   return (
     <div className={styles.postAuthorBar}>
       <div className={styles.leftContainer}>
         <UserPic width={48} height={48} src={authorProfileImage} />
         <div className={styles.textContent}>
-          <p className={styles.postAuthorName}>
-            {authorName}
-          </p>
+          <p className={styles.postAuthorName}>{authorName}</p>
           <p className={styles.postAuthorFollowers}>
             {authorWorkTitle} at {authorWorkPlace}
           </p>
@@ -51,10 +50,8 @@ export default function PostAuthorBar({
             className={styles.threeDots}
           />
         </div>
-        <div className={styles.optionsBg}>
-          <Image src={Xx} alt="x" className={styles.x} />
-        </div>
-      </div> */}
+              */}
+      {session.data?.user?.name == authorName && <DeletePost />}
     </div>
   );
 }
