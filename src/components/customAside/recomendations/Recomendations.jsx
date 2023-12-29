@@ -2,11 +2,11 @@ import React from "react";
 import styles from "./Recomendations.module.css";
 import Image from "next/image";
 import RecomendedUser from "./recomendedUser/RecomendedUser";
+import Link from "next/link";
+import ComponentBg from "@/components/componentBg/componentBg";
 // Photo source import
 import MoreInfoIcon from "/public/svg/info.svg";
 import RightPointedArrow from "/public/svg/arrowToRight.svg";
-import ComponentBg from "@/components/componentBg/componentBg";
-import Link from "next/link";
 
 const randomId = Math.floor(Math.random() * (75 - 15 + 1)) + 15;
 
@@ -21,8 +21,6 @@ const getData = async () => {
 
 export default async function Recomendations() {
   const data = await getData();
-
-  // console.log(data);
 
   return (
     <ComponentBg>

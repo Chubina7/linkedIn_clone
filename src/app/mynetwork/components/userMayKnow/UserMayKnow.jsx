@@ -11,9 +11,7 @@ export default function UserMayKnow({
   userLastName,
   userEmail,
   userImage,
-  userUsername,
   userWorkPlaceName,
-  userWorkPlaceDepartment,
   userWorkPlaceTitle,
 }) {
   return (

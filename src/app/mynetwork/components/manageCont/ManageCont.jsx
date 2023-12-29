@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import styles from "./ManageCont.module.css";
 import Footer from "@/components/footer/Footer";
 import Option from "./option/Option";
+import Image from "next/image";
 // Photo source import
 import Conntections from "/public/svg/connections.svg";
 import FollowingFollowers from "/public/svg/followingFollowers.svg";
@@ -12,7 +13,6 @@ import Events from "/public/svg/calendar.svg";
 import Pages from "/public/svg/pages.svg";
 import Newsletters from "/public/svg/letters.svg";
 import Hashtags from "/public/svg/hashTag.svg";
-import Image from "next/image";
 import ArrowUp from "/public/svg/arrow-up.svg";
 import ArrowDown from "/public/svg/arrow-down.svg";
 

@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./UserPic.module.css";
 import Image from "next/image";
 // Photo source import
-import ProfilePic from "/public/jpg/profile.jpg";
 import DefaultImg from "/public/png/defaultImg.png";
 
 export default function UserPic(props) {

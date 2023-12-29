@@ -2,10 +2,7 @@
 
 import React, { useState } from "react";
 import styles from "./page.module.css";
-import Image from "next/image";
 // Photo source import
-import GoogleLogo from "/public/png/googleLogo.png";
-import GitHubLogo from "/public/png/gitHubLogo.png";
 import { useRouter } from "next/navigation";
 
 export default function page() {

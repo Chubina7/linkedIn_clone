@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./DiscoverMore.module.css";
 import Image from "next/image";
+import ComponentBg from "@/components/componentBg/componentBg";
 // Photo source import
 import PlusIcon from "/public/svg/plus.svg";
-import ComponentBg from "@/components/componentBg/componentBg";
 
 export default function DiscoverMore() {
   return (

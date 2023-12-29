@@ -7,19 +7,17 @@ import DiscoverMore from "./childComponents/discoverMore/DiscoverMore";
 import Profile from "./childComponents/profile/Profile";
 import { LoginContext } from "@/context/LoginContext";
 import Link from "next/link";
-import Button from "../buttons/button/Button";
+import FollowBtn from "../buttons/followBtn/FollowBtn";
+import { useSession } from "next-auth/react";
 // Photo source import
 import LoginImage from "/public/svg/arrowToRight.svg";
 import DowrnArrow from "/public/svg/arrow-down.svg";
 import UpArrow from "/public/svg/arrow-up.svg";
-import FollowBtn from "../buttons/followBtn/FollowBtn";
-import { useSession } from "next-auth/react";
-import Loading from "../loading/Loading";
 
 export default function ProfileComponent() {
   const session = useSession();
 
-  const { userLogined, userImage, userName } = useContext(LoginContext);
+  const { userImage, userName } = useContext(LoginContext);
   const [moreShown, setMoreShown] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 

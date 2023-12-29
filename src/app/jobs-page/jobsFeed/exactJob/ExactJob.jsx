@@ -4,7 +4,6 @@ import UserPic from "@/components/userPic/UserPic";
 import Image from "next/image";
 // Photo source import
 import DoneLogo from "/public/svg/done.svg";
-import Xx from "/public/svg/xx.svg";
 
 export default function ExactJob({ jobTitle, jobRecruiter, statusTitle, src }) {
   return (
@@ -24,9 +23,6 @@ export default function ExactJob({ jobTitle, jobRecruiter, statusTitle, src }) {
           </div>
         </div>
       </div>
-      {/* <div className={styles.removeBtn}>
-        <Image src={Xx} alt="x icon" className={styles.xIcon} />
-      </div> */}
     </div>
   );
 }

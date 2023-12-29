@@ -23,9 +23,6 @@ export default async function UsersFetching() {
       <ComponentBg>
         <div className={styles.wrapper}>
           <p>No pending invitations</p>
-          {/* <div className={styles.container}>
-            <p className={styles.text}>Manage</p>
-          </div> */}
         </div>
       </ComponentBg>
       <ComponentBg>

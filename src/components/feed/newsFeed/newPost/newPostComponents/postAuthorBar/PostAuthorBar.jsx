@@ -42,15 +42,6 @@ export default function PostAuthorBar({
           </div>
         </div>
       </div>
-      {/* <div className={styles.rightContainer}>
-        <div className={styles.optionsBg}>
-          <Image
-            src={ThreeDots}
-            alt="three dots"
-            className={styles.threeDots}
-          />
-        </div>
-              */}
       {session.data?.user?.name == authorName && <DeletePost />}
     </div>
   );

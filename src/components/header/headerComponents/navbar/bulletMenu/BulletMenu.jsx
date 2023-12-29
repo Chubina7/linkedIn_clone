@@ -5,7 +5,6 @@ import styles from "./BulletMenu.module.css";
 import Image from "next/image";
 // Photo source import
 import Bullets from "/public/svg/dots.svg";
-import Backdrop from "@/components/backdrop/Backdrop";
 
 export default function BulletMenu() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -13,9 +12,6 @@ export default function BulletMenu() {
   const modalOpenHandler = () => {
     setModalOpen(!modalOpen);
   };
-  const modalCloseHandler = () => {
-    setModalOpen(!modalOpen)
-  }
 
   return (
     <>

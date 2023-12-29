@@ -9,12 +9,11 @@ import ComponentBg from "@/components/componentBg/ComponentBg";
 import FollowBtn from "@/components/buttons/followBtn/FollowBtn";
 import Button from "@/components/buttons/button/Button";
 import Link from "next/link";
+import { signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
 // Photo source import
 import ArrowDown from "/public/svg/downArrow.svg";
 import LoginImage from "/public/svg/arrowToRight.svg";
-import DefaultImg from "/public/png/defaultImg.png";
-import { signOut } from "next-auth/react";
-import { useRouter } from "next/navigation";
 
 export default function Profile() {
   const router = useRouter();

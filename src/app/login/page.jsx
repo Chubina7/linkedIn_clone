@@ -2,17 +2,18 @@
 
 import React from "react";
 import styles from "./page.module.css";
-// Photo source import
-import GoogleLogo from "/public/png/googleLogo.png";
 import Link from "next/link";
 import ProviderBtn from "./providerBtn/ProviderBtn";
 import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+// Photo source import
+import GoogleLogo from "/public/png/googleLogo.png";
 
 export default function page() {
   const session = useSession();
-  if (session.status === "loading") {
-    alert("Succsesfully logined");
-  }
+  const router = useRouter();
+  if (session.status == "authenticated") return router.push("/");
+
   return (
     <main className={styles.main}>
       <div className={styles.wrapper}>

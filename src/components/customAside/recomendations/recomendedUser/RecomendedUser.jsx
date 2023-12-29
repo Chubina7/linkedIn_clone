@@ -2,9 +2,9 @@ import React from "react";
 import styles from "./RecomendedUser.module.css";
 import Image from "next/image";
 import UserPic from "@/components/userPic/UserPic";
+import Link from "next/link";
 // Photo source import
 import PlusIcon from "/public/svg/plus.svg";
-import Link from "next/link";
 
 export default function RecomendedUser({
   userName,

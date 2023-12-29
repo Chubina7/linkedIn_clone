@@ -4,16 +4,15 @@ import React from "react";
 import styles from "./Navbar.module.css";
 import NavbarItem from "./navbarItem/NavbarItem";
 import Profile from "../profileIcon/Profile";
-import { LoginContext } from "@/context/LoginContext";
 import Link from "next/link";
 import FollowBtn from "@/components/buttons/followBtn/FollowBtn";
+import { useSession } from "next-auth/react";
+import Loading from "@/components/loading/Loading";
 // Photo source import
 import LoginImage from "/public/svg/arrowToRight.svg";
 import Home from "/public/svg/home.svg";
 import MyNetwork from "/public/svg/network.svg";
 import Jobs from "/public/svg/jobs.svg";
-import { useSession } from "next-auth/react";
-import Loading from "@/components/loading/Loading";
 
 const navItems = [
   { title: "Home", src: Home, alt: "Home", href: "/", id: 1 },
