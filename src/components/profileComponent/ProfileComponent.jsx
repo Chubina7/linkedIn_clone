@@ -31,39 +31,41 @@ export default function ProfileComponent() {
   };
 
   useEffect(() => {
-    
     window.addEventListener("resize", resizeHandler);
     return () => {
       window.removeEventListener("resize", resizeHandler);
     };
   }, []);
 
-  return (
-    <aside className={styles.wrapper}>
-      {userLogined ? (
-        <>
-          <Profile
-            moreIsShown={windowWidth > 768 || moreShown}
-            src={userImage}
-            name={userName}
-          />
-          {(windowWidth > 768 || moreShown) && <DiscoverMore />}
-          <div className={styles.showMoreBar} onClick={showMoreHandler}>
-            <div className={styles.hoverContainer}>
-              <p className={styles.text}>Show {moreShown ? "Less" : "More"}</p>
-              <Image
-                src={moreShown ? UpArrow : DowrnArrow}
-                alt="dropDown/dropUp"
-                className={styles.arrow}
-              />
-            </div>
+  if (session.status == "authenticated") {
+    return (
+      <aside className={styles.wrapper}>
+        <Profile
+          moreIsShown={windowWidth > 768 || moreShown}
+          src={userImage}
+          name={userName}
+        />
+        {(windowWidth > 768 || moreShown) && <DiscoverMore />}
+        <div className={styles.showMoreBar} onClick={showMoreHandler}>
+          <div className={styles.hoverContainer}>
+            <p className={styles.text}>Show {moreShown ? "Less" : "More"}</p>
+            <Image
+              src={moreShown ? UpArrow : DowrnArrow}
+              alt="dropDown/dropUp"
+              className={styles.arrow}
+            />
           </div>
-        </>
-      ) : (
+        </div>
+      </aside>
+    );
+  }
+  if (session.status == "unauthenticated") {
+    return (
+      <aside className={styles.wrapper}>
         <Link href={"/login"}>
           <FollowBtn title="Login / Sign Up" src={LoginImage} />
         </Link>
-      )}
-    </aside>
-  );
+      </aside>
+    );
+  }
 }

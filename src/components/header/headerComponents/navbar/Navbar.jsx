@@ -1,10 +1,9 @@
 "use client";
 
-import React, { useContext } from "react";
+import React from "react";
 import styles from "./Navbar.module.css";
 import NavbarItem from "./navbarItem/NavbarItem";
 import Profile from "../profileIcon/Profile";
-import BulletMenu from "./bulletMenu/BulletMenu";
 import { LoginContext } from "@/context/LoginContext";
 import Link from "next/link";
 import FollowBtn from "@/components/buttons/followBtn/FollowBtn";
@@ -13,6 +12,8 @@ import LoginImage from "/public/svg/arrowToRight.svg";
 import Home from "/public/svg/home.svg";
 import MyNetwork from "/public/svg/network.svg";
 import Jobs from "/public/svg/jobs.svg";
+import { useSession } from "next-auth/react";
+import Loading from "@/components/loading/Loading";
 
 const navItems = [
   { title: "Home", src: Home, alt: "Home", href: "/", id: 1 },
@@ -27,33 +28,36 @@ const navItems = [
 ];
 
 export default function Navbar() {
-  const { userLogined } = useContext(LoginContext);
+  const session = useSession();
 
-  return (
-    <>
-      {userLogined ? (
-        <nav className={styles.nav}>
-          <div className={styles.navItems}>
-            {navItems.map((item) => {
-              return (
-                <NavbarItem
-                  src={item.src}
-                  alt={item.alt}
-                  key={item.id}
-                  title={item.title}
-                  href={item.href}
-                />
-              );
-            })}
-          </div>
-          <Profile />
-          {/* <BulletMenu /> */}
-        </nav>
-      ) : (
+  if (session.status == "loading") return <Loading />;
+  if (session.status == "authenticated") {
+    return (
+      <nav className={styles.nav}>
+        <div className={styles.navItems}>
+          {navItems.map((item) => {
+            return (
+              <NavbarItem
+                src={item.src}
+                alt={item.alt}
+                key={item.id}
+                title={item.title}
+                href={item.href}
+              />
+            );
+          })}
+        </div>
+        <Profile />
+      </nav>
+    );
+  }
+  if (session.status == "unauthenticated") {
+    return (
+      <nav className={styles.nav}>
         <Link href={"/login"}>
           <FollowBtn title="Login / Sign Up" src={LoginImage} />
         </Link>
-      )}
-    </>
-  );
+      </nav>
+    );
+  }
 }

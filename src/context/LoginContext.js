@@ -1,11 +1,7 @@
 "use client"
 
-import Loading from "@/components/loading/Loading"
 import { useSession } from "next-auth/react"
 import { createContext, useEffect, useState } from "react"
-
-
-
 
 export const LoginContext = createContext()
 
@@ -56,7 +52,6 @@ export const LoginProvider = ({ children }) => {
 
     return (
         <LoginContext.Provider value={{ userLogined, userImage, userName, userEmail, loading }}>
-            {loading && <Loading />}
             {children}
         </LoginContext.Provider>
     )
