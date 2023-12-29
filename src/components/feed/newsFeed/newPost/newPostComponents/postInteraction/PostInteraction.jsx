@@ -37,6 +37,7 @@ export default function PostInteraction() {
         alt="like button"
         liked={liked}
         onClick={likeHandler}
+        cursor={false}
       />
       <Button
         title="Comment"
