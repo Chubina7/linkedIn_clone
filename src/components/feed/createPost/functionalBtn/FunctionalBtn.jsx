@@ -1,11 +1,9 @@
-"use client";
-
 import React, { useContext, useState } from "react";
 import styles from "./FunctionalBtn.module.css";
 import CreatePostModal from "../createPostModal/CreatePostModal";
 import { LoginContext } from "@/context/LoginContext";
 
-export default function FunctionalBtn() {
+export default function FunctionalBtn({ setNewPostList }) {
   const { userLogined } = useContext(LoginContext);
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -22,7 +20,12 @@ export default function FunctionalBtn() {
       <button className={styles.postInput} onClick={openModalHandler}>
         Start a post
       </button>
-      {modalOpen && <CreatePostModal onClick={openModalHandler} />}
+      {modalOpen && (
+        <CreatePostModal
+          onClick={openModalHandler}
+          setNewPostsList={setNewPostList}
+        />
+      )}
     </>
   );
 }

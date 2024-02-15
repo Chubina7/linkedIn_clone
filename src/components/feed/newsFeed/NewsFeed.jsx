@@ -1,18 +1,14 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import styles from "./NewsFeed.module.css";
 import NewPost from "./newPost/NewPost";
 
-export default function NewsFeed() {
+export default function NewsFeed({ newPostsList }) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const getData = async () => {
-      const response = await fetch("http://localhost:3000/api/posts", {
-        next: { revalidate: false },
-      });
+      const response = await fetch("http://localhost:3000/api/posts");
       const result = await response.json();
       if (!response.ok) {
         throw new Error("Error occuired");
@@ -21,7 +17,8 @@ export default function NewsFeed() {
       setLoading(false);
     };
     getData();
-  }, [data]);
+  }, [newPostsList]);
+
   return (
     <section className={styles.wrapper}>
       {loading ? (

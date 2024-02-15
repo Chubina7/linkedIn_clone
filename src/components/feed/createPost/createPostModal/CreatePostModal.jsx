@@ -6,13 +6,11 @@ import Backdrop from "@/components/backdrop/Backdrop";
 import UserPic from "@/components/userPic/UserPic";
 import Image from "next/image";
 import FollowBtn from "@/components/buttons/followBtn/FollowBtn";
-import { useRouter } from "next/navigation";
 import { LoginContext } from "@/context/LoginContext";
 // photo source import
 import Xx from "/public/svg/xx.svg";
 
-export default function CreatePostModal({ onClick }) {
-  const router = useRouter();
+export default function CreatePostModal({ onClick, setNewPostsList }) {
   const { userImage, userName } = useContext(LoginContext);
   const [message, setMessage] = useState("");
   const [authorName, setAuthorName] = useState("");
@@ -58,7 +56,7 @@ export default function CreatePostModal({ onClick }) {
         const data = await response.json();
         console.log(data);
         setMessage("Post has been created");
-        router.reload()
+        setNewPostsList(data);
       } else {
         alert("Write something first");
       }

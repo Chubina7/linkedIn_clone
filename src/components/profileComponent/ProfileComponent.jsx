@@ -9,6 +9,7 @@ import { LoginContext } from "@/context/LoginContext";
 import Link from "next/link";
 import FollowBtn from "../buttons/followBtn/FollowBtn";
 import { useSession } from "next-auth/react";
+
 // Photo source import
 import LoginImage from "/public/svg/arrowToRight.svg";
 import DowrnArrow from "/public/svg/arrow-down.svg";
@@ -16,10 +17,11 @@ import UpArrow from "/public/svg/arrow-up.svg";
 
 export default function ProfileComponent() {
   const session = useSession();
+  const wWidth = window.innerWidth;
 
   const { userImage, userName } = useContext(LoginContext);
   const [moreShown, setMoreShown] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(wWidth);
 
   const showMoreHandler = () => {
     setMoreShown(!moreShown);
