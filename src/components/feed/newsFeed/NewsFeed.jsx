@@ -30,6 +30,7 @@ export default function NewsFeed({ newPostsList }) {
           .map((item) => {
             return (
               <NewPost
+                key={item.createdAt}
                 authorName={item.authorName}
                 authorWorkPlace={item.authorWorkPlace}
                 authorWorkTitle={item.authorWorkTitle}

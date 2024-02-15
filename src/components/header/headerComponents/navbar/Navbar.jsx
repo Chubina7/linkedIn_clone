@@ -7,7 +7,7 @@ import Profile from "../profileIcon/Profile";
 import Link from "next/link";
 import FollowBtn from "@/components/buttons/followBtn/FollowBtn";
 import { useSession } from "next-auth/react";
-import Loading from "@/components/loading/Loading";
+import Loading from "@/components/loadingState/Loading";
 // Photo source import
 import LoginImage from "/public/svg/arrowToRight.svg";
 import Home from "/public/svg/home.svg";

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Jobs.module.css";
-import ComponentBg from "@/components/componentBg/ComponentBg";
+import BgComponent from "@/components/background/BgComponent";
 import ExactJob from "./exactJob/ExactJob";
 import Link from "next/link";
 // photo source import
@@ -49,7 +49,7 @@ const jobs = [
 ];
 export default function Jobs() {
   return (
-    <ComponentBg>
+    <BgComponent>
       <div className={styles.titleContainer}>
         <h1 className={styles.title}>Jobs For You</h1>
         <p className={styles.description}>
@@ -70,6 +70,6 @@ export default function Jobs() {
           );
         })}
       </div>
-    </ComponentBg>
+    </BgComponent>
   );
 }

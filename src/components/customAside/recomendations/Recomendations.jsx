@@ -3,7 +3,7 @@ import styles from "./Recomendations.module.css";
 import Image from "next/image";
 import RecomendedUser from "./recomendedUser/RecomendedUser";
 import Link from "next/link";
-import ComponentBg from "@/components/componentBg/componentBg";
+import BgComponent from "@/components/background/BgComponent";
 // Photo source import
 import MoreInfoIcon from "/public/svg/info.svg";
 import RightPointedArrow from "/public/svg/arrowToRight.svg";
@@ -23,7 +23,7 @@ export default async function Recomendations() {
   const data = await getData();
 
   return (
-    <ComponentBg>
+    <BgComponent>
       <div className={styles.upperContainer}>
         <p className={styles.heading}>Add to your feed</p>
         <Image
@@ -55,6 +55,6 @@ export default async function Recomendations() {
           </div>
         </Link>
       </div>
-    </ComponentBg>
+    </BgComponent>
   );
 }

@@ -2,12 +2,12 @@
 
 import React from "react";
 import styles from "./page.module.css";
-import ComponentBg from "@/components/componentBg/ComponentBg";
+import BgComponent from "@/components/background/BgComponent";
 import UserPic from "@/components/userPic/UserPic";
 import FollowBtn from "@/components/buttons/followBtn/FollowBtn";
 import Footer from "@/components/footer/Footer";
 import { useSession } from "next-auth/react";
-import Loading from "@/components/loading/Loading";
+import Loading from "@/components/loadingState/Loading";
 
 export default function page({ params }) {
   const session = useSession();
@@ -15,7 +15,7 @@ export default function page({ params }) {
   if (params.userName.replace("%20", " ") == session.data?.user?.name) {
     return (
       <main className={styles.main}>
-        <ComponentBg>
+        <BgComponent>
           <div className={styles.userProfileWrapper}>
             <div className={styles.userBackground}></div>
             <div className={styles.profilePicContainer}>
@@ -27,7 +27,9 @@ export default function page({ params }) {
             </div>
             <div className={styles.userProfile}>
               <h1 className={styles.userName}>{session.data?.user?.name}</h1>
-              <p className={styles.userProffesion}>{session.data?.user?.email}</p>
+              <p className={styles.userProffesion}>
+                {session.data?.user?.email}
+              </p>
               <p className={styles.userWorkPlace}></p>
               <p className={styles.userWorkTitle}></p>
               <p className={styles.user}></p>
@@ -38,7 +40,7 @@ export default function page({ params }) {
               </div>
             </div>
           </div>
-        </ComponentBg>
+        </BgComponent>
         <Footer />
       </main>
     );

@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./Modal.module.css";
-import ComponentBg from "@/components/componentBg/ComponentBg";
+import BgComponent from "@/components/background/BgComponent";
 import UserPic from "@/components/userPic/UserPic";
 import FollowBtn from "@/components/buttons/followBtn/FollowBtn";
 
 export default function Modal() {
   return (
-    <ComponentBg>
+    <BgComponent>
       <div className={styles.userInfo}>
         <UserPic width={48} heigth={48} />
         <div className={styles.textContent}>
@@ -30,6 +30,6 @@ export default function Modal() {
       <div className={styles.signOutContainer}>
         <p className={styles.text}>Sign Out</p>
       </div>
-    </ComponentBg>
+    </BgComponent>
   );
 }

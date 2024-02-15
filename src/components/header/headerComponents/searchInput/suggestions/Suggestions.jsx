@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./Suggestions.module.css";
-import ComponentBg from "@/components/componentBg/ComponentBg";
+import BgComponent from "@/components/background/BgComponent";
 
 export default function Suggestions() {
   return (
-    <ComponentBg>
+    <BgComponent>
       <h1>Test</h1>
       <h1>Test</h1>
       <h1>Test</h1>
-    </ComponentBg>
+    </BgComponent>
   );
 }

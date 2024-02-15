@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./DiscoverMore.module.css";
 import Image from "next/image";
-import ComponentBg from "@/components/componentBg/componentBg";
+import BgComponent from "@/components/background/BgComponent";
 // Photo source import
 import PlusIcon from "/public/svg/plus.svg";
 
 export default function DiscoverMore() {
   return (
-    <ComponentBg>
+    <BgComponent>
       <div className={styles.groupsContainer}>
         <p className={styles.text}>Groups</p>
       </div>
@@ -23,6 +23,6 @@ export default function DiscoverMore() {
       <div className={styles.discoverMoreBar}>
         <p className={styles.discoverMore}>Discover More</p>
       </div>
-    </ComponentBg>
+    </BgComponent>
   );
 }

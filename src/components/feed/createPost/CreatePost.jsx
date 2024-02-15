@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import styles from "./CreatePost.module.css";
 import UserPic from "@/components/userPic/UserPic";
 import Button from "@/components/buttons/button/Button";
-import ComponentBg from "../../componentBg/ComponentBg";
+import ComponentBg from "../../background/BgComponent";
 import FunctionalBtn from "./functionalBtn/FunctionalBtn";
 import { LoginContext } from "@/context/LoginContext";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./page.module.css";
-import ComponentBg from "@/components/componentBg/ComponentBg";
 import UserPic from "@/components/userPic/UserPic";
+import BgComponent from "@/components/background/BgComponent";
 // photo source import
 import GoogleLogo from "/public/jpg/google.jpg";
 import FacebookLogo from "/public/jpg/facebook.jpg";
@@ -60,7 +60,7 @@ const jobs = [
 export default function page({ params }) {
   return (
     <main className={styles.main}>
-      <ComponentBg>
+      <BgComponent>
         <div className={styles.wrapper}>
           <div>
             <UserPic width={64} height={64} src={jobs[params.job].src} />
@@ -82,7 +82,7 @@ export default function page({ params }) {
             {jobs[params.job].jobDescription}
           </p>
         </div>
-      </ComponentBg>
+      </BgComponent>
     </main>
   );
 }

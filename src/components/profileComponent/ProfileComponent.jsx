@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./ProfileComponent.module.css";
 import Image from "next/image";
 import DiscoverMore from "./childComponents/discoverMore/DiscoverMore";
@@ -17,36 +17,28 @@ import UpArrow from "/public/svg/arrow-up.svg";
 
 export default function ProfileComponent() {
   const session = useSession();
-  const wWidth = window.innerWidth;
 
   const { userImage, userName } = useContext(LoginContext);
   const [moreShown, setMoreShown] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(wWidth);
+ 
 
-  const showMoreHandler = () => {
-    setMoreShown(!moreShown);
-  };
-  const resizeHandler = () => {
-    setWindowWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", resizeHandler);
-    return () => {
-      window.removeEventListener("resize", resizeHandler);
-    };
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("resize", resizeHandler);
+  //   return () => {
+  //     window.removeEventListener("resize", resizeHandler);
+  //   };
+  // }, []);
 
   if (session.status == "authenticated") {
     return (
       <aside className={styles.wrapper}>
         <Profile
-          moreIsShown={windowWidth > 768 || moreShown}
+          // moreIsShown={windowWidth > 768 || moreShown}
           src={userImage}
           name={userName}
         />
-        {(windowWidth > 768 || moreShown) && <DiscoverMore />}
-        <div className={styles.showMoreBar} onClick={showMoreHandler}>
+        {/* {(windowWidth > 768 || moreShown) && <DiscoverMore />} */}
+        <div className={styles.showMoreBar}>
           <div className={styles.hoverContainer}>
             <p className={styles.text}>Show {moreShown ? "Less" : "More"}</p>
             <Image

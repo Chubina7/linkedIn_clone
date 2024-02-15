@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Profile.module.css";
 import Image from "next/image";
 import UserPic from "@/components/userPic/UserPic";
-import ComponentBg from "@/components/componentBg/componentBg";
+import BgComponent from "@/components/background/BgComponent";
 // Photo source import
 import AddFriendIcon from "/public/svg/addFriend.svg";
 import BookmarkIcon from "/public/svg/bookmark.svg";
@@ -13,7 +13,7 @@ export default function Profile({ moreIsShown, src, name }) {
   const session = useSession();
 
   return (
-    <ComponentBg>
+    <BgComponent>
       <div className={styles.backgroundImg}></div>
       <div className={styles.identifierContainer}>
         <Link href={`/loginedUser/${session.data?.user?.name}`}>
@@ -54,6 +54,6 @@ export default function Profile({ moreIsShown, src, name }) {
           </div>
         </>
       )}
-    </ComponentBg>
+    </BgComponent>
   );
 }
