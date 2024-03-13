@@ -1,10 +1,10 @@
 import React from "react";
+import styles from "./NewPost.module.css";
 import PostAuthorBar from "./newPostComponents/postAuthorBar/PostAuthorBar";
 import PostDescription from "./newPostComponents/postDescription/PostDescription";
 import PostContent from "./newPostComponents/postContent/PostContent";
 import PostEngagement from "./newPostComponents/postEngagement/PostEngagement";
 import PostInteraction from "./newPostComponents/postInteraction/postInteraction";
-import BgComponent from "@/components/background/BgComponent";
 
 export default function NewPost({
   authorName,
@@ -18,7 +18,7 @@ export default function NewPost({
   postComments,
 }) {
   return (
-    <BgComponent>
+    <div className={styles.wrapper}>
       <PostAuthorBar
         authorName={authorName}
         authorWorkPlace={authorWorkPlace}
@@ -30,6 +30,6 @@ export default function NewPost({
       {postContent == null ? <></> : <PostContent postContent={postContent} />}
       <PostEngagement postLikes={postLikes} postComments={postComments} />
       <PostInteraction />
-    </BgComponent>
+    </div>
   );
 }

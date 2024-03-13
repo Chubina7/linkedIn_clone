@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.css";
 import Image from "next/image";
-import ComponentBg from "../background/BgComponent";
 import Link from "next/link";
 // Photo source import
 import FooterImg from "/public/jpg/footerImg.jpg";
@@ -9,7 +8,7 @@ import FooterImg from "/public/jpg/footerImg.jpg";
 export default function Footer({ children }) {
   return (
     <footer className={styles.footer}>
-      <ComponentBg>
+      <div className={styles.wrapper}>
         {children}
         <Image
           src={FooterImg}
@@ -17,7 +16,7 @@ export default function Footer({ children }) {
           className={styles.image}
           priority
         />
-      </ComponentBg>
+      </div>
       <div className={styles.reservation}>
         <Link
           href={"https://github.com/Chubina7/linkedIn_clone"}

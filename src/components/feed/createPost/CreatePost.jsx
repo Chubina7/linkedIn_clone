@@ -2,8 +2,7 @@ import React, { useContext } from "react";
 import styles from "./CreatePost.module.css";
 import UserPic from "@/components/userPic/UserPic";
 import Button from "@/components/buttons/button/Button";
-import ComponentBg from "../../background/BgComponent";
-import FunctionalBtn from "./functionalBtn/FunctionalBtn";
+import StartAPost from "./startAPost/StartAPost";
 import { LoginContext } from "@/context/LoginContext";
 
 // Photo source import
@@ -15,10 +14,10 @@ export default function CreatePost({ setNewPostsList }) {
   const { userImage } = useContext(LoginContext);
 
   return (
-    <ComponentBg>
+    <div className={styles.wrapper}>
       <div className={styles.top}>
         <UserPic width={48} height={48} src={userImage} />
-        <FunctionalBtn setNewPostList={setNewPostsList} />
+        <StartAPost setNewPostList={setNewPostsList} />
       </div>
       <div className={styles.postSuggestionsContainer}>
         <Button title="Media" src={MediaIcon} alt={"media icon"} />
@@ -29,6 +28,6 @@ export default function CreatePost({ setNewPostsList }) {
           alt={"article icon"}
         />
       </div>
-    </ComponentBg>
+    </div>
   );
 }

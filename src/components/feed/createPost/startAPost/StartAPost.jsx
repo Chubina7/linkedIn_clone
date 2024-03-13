@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react";
-import styles from "./FunctionalBtn.module.css";
+import styles from "./StartAPost.module.css";
 import CreatePostModal from "../createPostModal/CreatePostModal";
 import { LoginContext } from "@/context/LoginContext";
 
-export default function FunctionalBtn({ setNewPostList }) {
+export default function StartAPost({ setNewPostList }) {
   const { userLogined } = useContext(LoginContext);
   const [modalOpen, setModalOpen] = useState(false);
 
