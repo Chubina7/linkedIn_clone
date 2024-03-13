@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import styles from "./CreatePostModal.module.css";
 import Backdrop from "@/components/backdrop/Backdrop";
 import UserPic from "@/components/userPic/UserPic";
@@ -12,6 +12,7 @@ import Xx from "/public/svg/xx.svg";
 
 export default function CreatePostModal({ onClick, setNewPostsList }) {
   const { userImage, userName } = useContext(LoginContext);
+  const textAreaRef = useRef();
   const [message, setMessage] = useState("");
   const [authorName, setAuthorName] = useState("");
   const [authorSurename, setAuthorSurename] = useState("");
@@ -23,9 +24,12 @@ export default function CreatePostModal({ onClick, setNewPostsList }) {
   const [postLikes, setPostLikes] = useState(0);
   const [postComments, setPostComments] = useState(0);
 
+  useEffect(() => {
+    if (textAreaRef.current) textAreaRef.current.focus();
+  }, []);
+
   const textAreaChangeHandler = (e) => {
     setPostDescription(e.target.value);
-
     setAuthorName(userName);
     setAuthorSurename(userName);
     setAuthorWorkPlace("workplace");
@@ -67,7 +71,7 @@ export default function CreatePostModal({ onClick, setNewPostsList }) {
 
   return (
     <>
-      {message !== "Post has been created" ? (
+      {message !== "Post has been created" && (
         <>
           <div className={styles.wrapper}>
             <div className={styles.upperContainer}>
@@ -93,6 +97,7 @@ export default function CreatePostModal({ onClick, setNewPostsList }) {
               placeholder="What do you want to talk about"
               className={styles.textArea}
               onChange={textAreaChangeHandler}
+              ref={textAreaRef}
             ></textarea>
             <div className={styles.postBtnContainer}>
               <div style={{ width: "100px" }}>
@@ -102,8 +107,6 @@ export default function CreatePostModal({ onClick, setNewPostsList }) {
           </div>
           <Backdrop show={true} zIndex={"101"} onClick={onClick} />
         </>
-      ) : (
-        <></>
       )}
     </>
   );
