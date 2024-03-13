@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./Jobs.module.css";
-import BgComponent from "@/components/background/BgComponent";
 import ExactJob from "./exactJob/ExactJob";
 import Link from "next/link";
 // photo source import
@@ -49,7 +48,7 @@ const jobs = [
 ];
 export default function Jobs() {
   return (
-    <BgComponent>
+    <div className={styles.componentWrapper}>
       <div className={styles.titleContainer}>
         <h1 className={styles.title}>Jobs For You</h1>
         <p className={styles.description}>
@@ -57,7 +56,7 @@ export default function Jobs() {
         </p>
       </div>
       <div className={styles.wrapper}>
-        {jobs.map((item) => {
+        {jobs.map((item, index) => {
           return (
             <Link href={`/jobs-page/${item.id}`}>
               <ExactJob
@@ -65,11 +64,12 @@ export default function Jobs() {
                 jobRecruiter={item.jobRecruiter}
                 statusTitle={item.statusTitle}
                 src={item.src}
+                key={index + item.jobTitle + item.id}
               />
             </Link>
           );
         })}
       </div>
-    </BgComponent>
+    </div>
   );
 }

@@ -27,10 +27,10 @@ export default function NewsFeed({ newPostsList }) {
         data
           .slice()
           .reverse()
-          .map((item) => {
+          .map((item, index) => {
             return (
               <NewPost
-                key={item.createdAt}
+                key={item.createdAt + index}
                 authorName={item.authorName}
                 authorWorkPlace={item.authorWorkPlace}
                 authorWorkTitle={item.authorWorkTitle}

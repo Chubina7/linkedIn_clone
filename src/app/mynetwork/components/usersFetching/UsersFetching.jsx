@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./UsersFetching.module.css";
-import BgComponent from "@/components/background/BgComponent";
 import UserMayKnow from "../userMayKnow/UserMayKnow";
 
 const getData = async () => {
@@ -20,17 +19,17 @@ export default async function UsersFetching() {
   const users = await getData();
   return (
     <div className={styles.mainWrapper}>
-      <BgComponent>
+      <div className={styles.componentWrapper}>
         <div className={styles.wrapper}>
           <p>No pending invitations</p>
         </div>
-      </BgComponent>
-      <BgComponent>
+      </div>
+      <div className={styles.componentWrapper}>
         <div className={styles.upperContainer}>
           <p>People who are in Georgia also follow these people</p>
         </div>
         <div className={styles.fetchedDataWrapper}>
-          {users.map((item) => {
+          {users.map((item, index) => {
             return (
               <UserMayKnow
                 userId={item.id}
@@ -42,11 +41,12 @@ export default async function UsersFetching() {
                 userWorkPlaceName={item.company.name}
                 userWorkPlaceDepartment={item.company.department}
                 userWorkPlaceTitle={item.company.title}
+                key={index + item.title + item.id}
               />
             );
           })}
         </div>
-      </BgComponent>
+      </div>
     </div>
   );
 }

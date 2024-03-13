@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./JobsSorter.module.css";
 import Option from "@/app/mynetwork/components/manageCont/option/Option";
-import BgComponent from "@/components/background/BgComponent";
 // photo source import
 import BookmarkLogo from "/public/svg/bookmark.svg";
 import ListLogo from "/public/svg/listLogo.svg";
@@ -12,7 +11,7 @@ import SettingsLogo from "/public/svg/settings.svg";
 
 export default function JobsSorter() {
   return (
-    <BgComponent>
+    <div className={styles.componentWrapper}>
       <div className={styles.wrapper}>
         <Option title="My Jobs" src={BookmarkLogo} alt="bookmark logo" />
         <Option title="Preferences" src={ListLogo} alt="list logo" />
@@ -29,6 +28,6 @@ export default function JobsSorter() {
           alt="settings logo"
         />
       </div>
-    </BgComponent>
+    </div>
   );
 }

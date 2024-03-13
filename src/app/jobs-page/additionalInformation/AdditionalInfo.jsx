@@ -4,12 +4,12 @@ import React, { useContext } from "react";
 import styles from "./AdditionalInfo.module.css";
 import UserPic from "@/components/userPic/UserPic";
 import { LoginContext } from "@/context/LoginContext";
-import BgComponent from "@/components/background/BgComponent";
 
 export default function AdditionalInfo() {
   const { userImage } = useContext(LoginContext);
+  
   return (
-    <BgComponent>
+    <div className={styles.wrapper}>
       <div className={styles.headingContainer}>
         <p className={styles.heading}>Open To Work</p>
         <p className={styles.headingDesc}>Recomended based on your activity</p>
@@ -27,6 +27,6 @@ export default function AdditionalInfo() {
         </p>
         <p className={styles.bottomBtn}>Get Started</p>
       </div>
-    </BgComponent>
+    </div>
   );
 }

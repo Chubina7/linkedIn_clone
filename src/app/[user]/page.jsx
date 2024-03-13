@@ -5,7 +5,6 @@ import styles from "./page.module.css";
 import Loading from "@/components/loadingState/Loading";
 import UserPic from "@/components/userPic/UserPic";
 import Footer from "@/components/footer/Footer";
-import BgComponent from "@/components/background/BgComponent";
 // Photo source import
 import FollowBtn from "@/components/buttons/followBtn/FollowBtn";
 
@@ -24,7 +23,7 @@ export default function page({ params }) {
   return (
     <main className={styles.main}>
       {data ? (
-        <BgComponent>
+        <div className={styles.wrapper}>
           <div className={styles.userProfileWrapper}>
             <div className={styles.userBackground}></div>
             <div className={styles.profilePicContainer}>
@@ -48,7 +47,7 @@ export default function page({ params }) {
               </div>
             </div>
           </div>
-        </BgComponent>
+        </div>
       ) : (
         <Loading />
       )}

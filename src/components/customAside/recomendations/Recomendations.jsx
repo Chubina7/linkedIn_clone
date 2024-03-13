@@ -31,7 +31,7 @@ export default async function Recomendations() {
           className={styles.moreInfoIcon}
         />
       </div>
-      {data.map((item) => {
+      {data.map((item, index) => {
         return (
           <RecomendedUser
             userId={item.id}
@@ -39,6 +39,7 @@ export default async function Recomendations() {
             userName={item.firstName}
             userSureName={item.lastName}
             workTitle={item.company.title}
+            key={index + item.id + item.title}
           />
         );
       })}

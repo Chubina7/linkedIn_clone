@@ -15,7 +15,7 @@ export default function page({ params }) {
   if (params.userName.replace("%20", " ") == session.data?.user?.name) {
     return (
       <main className={styles.main}>
-        <BgComponent>
+        <div className={styles.wrarpper}>
           <div className={styles.userProfileWrapper}>
             <div className={styles.userBackground}></div>
             <div className={styles.profilePicContainer}>
@@ -40,7 +40,7 @@ export default function page({ params }) {
               </div>
             </div>
           </div>
-        </BgComponent>
+        </div>
         <Footer />
       </main>
     );
