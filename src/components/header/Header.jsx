@@ -4,14 +4,12 @@ import styles from "./Header.module.css";
 import Navbar from "./headerComponents/navbar/Navbar";
 import LeftFloater from "./headerComponents/leftFloater/LeftFloater";
 
-export default function header() {
+export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.wrapper}>
-        <div className={styles.container}>
-          <LeftFloater />
-          <Navbar />
-        </div>
+        <LeftFloater />
+        <Navbar />
       </div>
     </header>
   );

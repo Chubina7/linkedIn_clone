@@ -11,19 +11,20 @@ import Link from "next/link";
 
 export default function SearchInput() {
   const [isFocused, setIsFocused] = useState(false);
+  const floatingInputRef = useRef(null);
+
   const inputActivationHandler = () => {
     setIsFocused(!isFocused);
   };
+  const inputUnmountHandler = () => {
+    setIsFocused(false);
+  };
 
-  const floatingInputRef = useRef(null);
   useEffect(() => {
     if (isFocused && floatingInputRef.current) {
       floatingInputRef.current.focus();
     }
   }, [isFocused]);
-  const inputUnmountHandler = () => {
-    setIsFocused(false);
-  };
 
   return (
     <>
