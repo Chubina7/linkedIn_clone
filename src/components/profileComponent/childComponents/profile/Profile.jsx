@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Profile.module.css";
 import Image from "next/image";
 import UserPic from "@/components/userPic/UserPic";
@@ -8,8 +8,10 @@ import AddFriendIcon from "/public/svg/addFriend.svg";
 import BookmarkIcon from "/public/svg/bookmark.svg";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
+import { LoginContext } from "@/context/LoginContext";
 
-export default function Profile({ moreIsShown, src, name }) {
+export default function Profile({ moreShown }) {
+  const { userImage, userName } = useContext(LoginContext);
   const session = useSession();
 
   return (
@@ -18,14 +20,14 @@ export default function Profile({ moreIsShown, src, name }) {
       <div className={styles.identifierContainer}>
         <Link href={`/loginedUser/${session.data?.user?.name}`}>
           <div className={styles.identifier}>
-            <UserPic height={72} width={72} src={src} />
-            <p className={styles.userName}>{name}</p>
+            <UserPic height={72} width={72} src={userImage} />
+            <p className={styles.userName}>{userName}</p>
           </div>
         </Link>
-        <p className={styles.userDescription}>- -</p>
+        <p className={styles.userDescription}>---</p>
       </div>
 
-      {moreIsShown && (
+      {moreShown && (
         <>
           <div className={styles.hoverContainer}>
             <div className={styles.connectionContainer}>

@@ -1,0 +1,32 @@
+.showMoreBar {
+  opacity: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+.text {
+  font-size: 14px;
+  font-weight: 500;
+}
+.hoverContainer {
+  border-radius: 6px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+  gap: 10px;
+}
+.hoverContainer:hover {
+  cursor: pointer;
+  border-radius: 6px;
+  background-color: var(--hover-bg-color);
+}
+
+@media screen and (min-width: 768px) {
+  .showMoreBar {
+    display: none;
+  }
+}
