@@ -5,7 +5,6 @@ import styles from "./Profile.module.css";
 import Image from "next/image";
 import { LoginContext } from "@/context/LoginContext";
 import UserPic from "@/components/userPic/UserPic";
-import BgComponent from "@/components/background/BgComponent";
 import FollowBtn from "@/components/buttons/followBtn/FollowBtn";
 import Button from "@/components/buttons/button/Button";
 import Link from "next/link";
@@ -50,7 +49,7 @@ export default function Profile() {
       {modalOpen && (
         <>
           <div className={styles.modal} ref={modalRef}>
-            <BgComponent>
+            <div className={styles.wrapper}>
               <div
                 style={{
                   width: "100%",
@@ -87,7 +86,7 @@ export default function Profile() {
                   </Link>
                 )}
               </div>
-            </BgComponent>
+            </div>
           </div>
         </>
       )}

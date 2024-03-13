@@ -1,3 +1,13 @@
+.wrapper {
+  border: 2px solid var(--secondary-color);
+  border-radius: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: white;
+}
 /*  */
 .backgroundImg {
   border-top-right-radius: 10px;

@@ -2,7 +2,6 @@
 
 import React from "react";
 import styles from "./page.module.css";
-import BgComponent from "@/components/background/BgComponent";
 import UserPic from "@/components/userPic/UserPic";
 import FollowBtn from "@/components/buttons/followBtn/FollowBtn";
 import Footer from "@/components/footer/Footer";
